@@ -47,7 +47,7 @@ Veritaseum(VERI), tiene supply->https://veritas.veritaseum.com/
 Electroneum(ETN), poco preciso->https://electroneum.com/
 Ark(ARK), https://explorer.ark.io/
 Ardor(ARDR), https://ardor.tools/charts/market/market_cap
-
+Syscoin(SYS), no tiene
 
 
 
