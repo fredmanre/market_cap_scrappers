@@ -1,8 +1,7 @@
-import pandas as pd
+# import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 import datetime
-from collections import OrderedDict
 
 
 list_json = []
@@ -23,11 +22,32 @@ def btc():
     dict_ = {'name': 'Bitcoin',
              'symbol': 'BTC',
              'marketcap_usd': market_cap,
+             'current_supply': None,
              'update_time': datetime.datetime.now().timestamp(),
              'resource': 'https://bitcoincharts.com/bitcoin/'
             }
     list_json.append(dict_)
 
+    
+
+def eth():
+    html = requests.get('https://etherscan.io/stat/supply')
+    soup = BeautifulSoup(html.text, 'html.parser')
+    spans = soup.find_all('span')
+    market_cap = spans[3].string
+    dict_ = {'name': 'Ethereum',
+             'symbol': 'ETH',
+             'marketcap_usd': market_cap,
+             'current_supply': None,
+             'update_time': datetime.datetime.now().timestamp(),
+             'resource': 'https://etherscan.io/stat/supply'
+            }
+    list_json.append(dict_)
+    
+
 
 btc()
+eth()
 print(list_json)
+    
+    
