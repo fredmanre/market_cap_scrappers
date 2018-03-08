@@ -1,0 +1,57 @@
+BTC, https://bitcoincharts.com/bitcoin/
+ETH, no-> https://etherscan.io/stat/supply
+XRP, https://xrpcharts.ripple.com/#/
+BCC, no tiene
+LTC, no tiene
+NEO, no tiene
+ADA, no tiene
+XLM, https://stellarchain.io/
+XMR, no tiene
+EOS, no tiene market_cap pero si total_supply-> https://ethplorer.io/address/0x86fa049857e0209aa7d9e616f7eb3b3b78ecfdb0
+MIOTA, no tiene
+DASH, https://www.dash.org/network/#section-exchanges
+XEM, https://nem.io/es/inversores/
+TRX, no indican ni market_cap ni supply(https://tron.network/entrx.html)
+USDT, https://wallet.tether.to/transparency(dice total assets, no market_cap)
+ETC, no tiene
+VEN, no tiene
+LSK, https://explorer.lisk.io/ (supply, habria que multiplicar por precio)
+qtum, https://explorer.qtum.org/
+BTG, https://btgexplorer.com/
+NANO, no tiene
+OMG, no tiene
+ZEC, https://explorer.zcha.in/
+ICX, https://www.icon.foundation/contents/icx/overviews?lang=en
+BNB, https://info.binance.com/currencies/binance-coin
+DGD, no tiene
+STEEM, https://steemd.com/
+BCN, https://bytecoin.org/
+WAVES, poco preciso->http://wavesgo.com/
+PPT, https://populous.co/
+XVG, trae el supply->https://verge-blockchain.info/
+STRAT, no tiene
+SNT, no tiene
+MKR, tiene supply->https://dai.makerdao.com/
+RHOC, no tiene
+SC, poco precisa->https://sia.tech/
+DOGE, da error su pagina->http://dogechain.info/search?perror=0d9b6afb
+BTS, da el supply->http://open-explorer.io/#/dashboard
+Waltonchain(WTC), no tiene
+Decred(DCR), tiene supply->https://mainnet.decred.org/status
+Augur(REP), no tiene
+Aeternity(AE), no tiene
+Komodo(KMD), tiene supply->http://kmd.komodochainz.info/
+0x(ZRX), no tiene
+Bytom(BTM), no tiene
+Veritaseum(VERI), tiene supply->https://veritas.veritaseum.com/
+Electroneum(ETN), poco preciso->https://electroneum.com/
+Ark(ARK), https://explorer.ark.io/
+Ardor(ARDR), https://ardor.tools/charts/market/market_cap
+
+
+
+
+
+
+
+SC, lo da en formato poco preciso
