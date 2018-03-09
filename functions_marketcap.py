@@ -1,9 +1,14 @@
 # import pandas as pd
+import time
+import datetime
 import requests
 from bs4 import BeautifulSoup
-import datetime
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 
-
+# path and setup to gekkodriver needed for selenium
+path = "/usr/lib64/chromium/chromedriver"
+# list of scrappers
 list_json = []
 
 
@@ -45,9 +50,31 @@ def eth():
     list_json.append(dict_)
     
 
+def xlm():
+    # chrome options
+    ch_op = Options()
+    ch_op.add_argument('--headless')
+    driver = webdriver.Chrome(executable_path=path, chrome_options=ch_op)
+    driver.get('https://stellarchain.io/')
+    time.sleep(2)
+    html = driver.page_source
+    soup = BeautifulSoup(html, 'html.parser')
+    market_cap = soup.find(id='market_cap_usd').text
+    print(market_cap)
+    dict_ = {'name': 'Stellar',
+         'symbol': 'XLM',
+         'marketcap_usd': market_cap,
+         'current_supply': None,
+         'update_time': datetime.datetime.now().timestamp(),
+         'resource': 'https://etherscan.io/stat/supply'
+        }
+    list_json.append(dict_)
+
+    
 
 btc()
 eth()
+xlm()
 print(list_json)
     
     

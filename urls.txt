@@ -1,11 +1,11 @@
 BTC, https://bitcoincharts.com/bitcoin/
 ETH, no-> https://etherscan.io/stat/supply
-XRP, https://xrpcharts.ripple.com/#/
+XRP, no tiene->https://xrpcharts.ripple.com/#/
 BCC, no tiene
 LTC, no tiene
 NEO, no tiene
 ADA, no tiene
-XLM, https://stellarchain.io/
+Stellar(XLM), https://stellarchain.io/
 XMR, no tiene
 EOS, no tiene->https://ethplorer.io/address/0x86fa049857e0209aa7d9e616f7eb3b3b78ecfdb0
 MIOTA, no tiene
