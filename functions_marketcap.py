@@ -95,4 +95,14 @@ def lsk():
     list_json.append(dict_)
 
 
+def qtum():
+    resource = 'https://explorer.qtum.org/'
+    soup = extract_with_se(resource, 2)
+    div = soup.find_all('div', class_='label ng-binding')
+    current = ((div[1].text).split(' '))[0]
+    market_cap = ((div[8].text).split(' '))[0]
+    dict_ = insert_into_list('Qtum', 'QTUM', market_cap, current, resource)
+    list_json.append(dict_)
+
+qtum()
 print(list_json)
