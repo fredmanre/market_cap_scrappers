@@ -11,33 +11,32 @@ import datetime
 # variables
 path = "/usr/lib64/chromium/chromedriver"
 now = datetime.datetime.now().timestamp()
-    
-    
+
+
 def insert_into_list(name, symbol, market_cap, current_supply, resource):
     if len(current_supply) > 0:
         current_supply = current_supply
     else:
         current_supply = None
-    dict_ = {
-            'name': name,
+    dict_ = {'name': name,
              'symbol': symbol,
              'marketcap_usd': market_cap,
              'current_supply': current_supply,
              'update_time': now,
-             'resource': resource
-            }
+             'resource': resource}
     return dict_
 
 
-def extract_with_se(url):
+def extract_with_se(url, sleep):
     # chrome options
     ch_op = Options()
     ch_op.add_argument('--headless')
     driver = webdriver.Chrome(executable_path=path, chrome_options=ch_op)
     driver.get(url)
-    time.sleep(2)
-    html = driver.page_source
+    time.sleep(sleep)
+    page = driver.page_source
     driver.quit()
+    html = BeautifulSoup(page, 'html.parser')
     return html
 
 
