@@ -47,4 +47,22 @@ Veritaseum(VERI), tiene supply->https://veritas.veritaseum.com/
 Electroneum(ETN), poco preciso->https://electroneum.com/
 Ark(ARK), no tiene
 Ardor(ARDR), https://ardor.tools/charts/market/market_cap
+----------------------------------------------------------
+Criptonex(CNX), poco preciso->https://cryptonex.org/
 Syscoin(SYS), no tiene
+dragonchain(drgn), supply->https://dragonchain.com/
+Basic Attention Token(BAT), no tiene
+Hshare(HSR), http://explorer.h.cash/
+Gas(GAS), page not repsonse->
+Golem(GNT), no tiene
+DigiByte(DGB), no tiene
+PIVS(PIVX), poco precisa->https://pivx.org/es/spanish-home-page/
+Aion(AION), no tiene
+Ethos(ETHOS), no tiene
+Monacoin(MONA), no tiene
+QASH(QASH), notiene
+Factom(FCT), no tiene
+Loopring(LRC), no tiene
+FunFair(FUN), no tiene
+ByteballBytes(GBYTE), no tiene
+Revain(R), poco preciso->https://revain.org/
