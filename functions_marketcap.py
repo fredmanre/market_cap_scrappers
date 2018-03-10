@@ -104,5 +104,34 @@ def qtum():
     dict_ = insert_into_list('Qtum', 'QTUM', market_cap, current, resource)
     list_json.append(dict_)
 
-qtum()
+
+def btg():
+    resource = 'https://btgexplorer.com/'
+    soup = extract_with_se(resource, 2)
+    span = soup.find(class_='b-market-cap-count ng-binding ng-scope').text
+    market_cap = span.split('$')[1]
+    dict_ = insert_into_list('BitcoinGold', 'BTG', market_cap, '', resource)
+    list_json.append(dict_)
+
+
+def zec():
+    resource = 'https://explorer.zcha.in/'
+    soup = extract_with_se(resource, 2)
+    div = soup.find_all(class_='col-md-3 col-xs-6')[-2]
+    div = div.find_all('div')[1].text
+    market_cap = div.split('$')[1]
+    dict_ = insert_into_list('Zcash', 'ZEC', market_cap, '', resource)
+    list_json.append(dict_)
+
+
+def bnb():
+    resource = 'https://info.binance.com/currencies/binance-coin'
+    soup = extract_with_bs(resource)
+    strongs = soup.find_all('strong')
+    market_cap = strongs[3].text
+    current = strongs[5].text
+    dict_ = insert_into_list('Binance', 'BNB', market_cap, current, resource)
+    list_json.append(dict_)
+
+
 print(list_json)

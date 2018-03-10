@@ -12,17 +12,17 @@ MIOTA, no tiene
 DASH, https://www.dash.org/network/#section-exchanges
 XEM, https://nem.io/es/inversores/
 TRX, no indican ni market_cap ni supply(https://tron.network/entrx.html)
-USDT, https://wallet.tether.to/transparency(dice total assets, no market_cap)
+Tether(USDT), https://wallet.tether.to/transparency(dice total assets, no market_cap)
 ETC, no tiene
 VEN, no tiene
 LSK, https://explorer.lisk.io/ (supply, habria que multiplicar por precio)
 qtum, https://explorer.qtum.org/
-BTG, https://btgexplorer.com/
+Bitcoin Gold(BTG), https://btgexplorer.com/
 NANO, no tiene
 OMG, no tiene
 ZEC, https://explorer.zcha.in/
 ICX, no es preciso->https://www.icon.foundation/contents/icx/overviews?lang=en
-BNB, https://info.binance.com/currencies/binance-coin
+Binance(BNB), https://info.binance.com/currencies/binance-coin
 DGD, no tiene
 Steemit STEEM, https://steemd.com/
 BCN, https://bytecoin.org/
