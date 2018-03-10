@@ -85,4 +85,14 @@ def usdt():
     list_json.append(dict_)
 
 
+def lsk():
+    resource = 'https://explorer.lisk.io/'
+    soup = extract_with_se(resource, 2)
+    span = soup.find_all(class_='supply')
+    market_cap = None
+    current = ((span[0].text).split(':'))[1].strip()  # current_supply
+    dict_ = insert_into_list('Lisk', 'LSK', market_cap, current, resource)
+    list_json.append(dict_)
+
+
 print(list_json)
