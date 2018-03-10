@@ -5,6 +5,8 @@ import requests
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+# functions
+from functions import insert_into_list
 
 # path and setup to gekkodriver needed for selenium
 path = "/usr/lib64/chromium/chromedriver"
@@ -24,13 +26,11 @@ def btc():
     string = str(market)
     items = string.split()
     market_cap = items[0]
-    dict_ = {'name': 'Bitcoin',
-             'symbol': 'BTC',
-             'marketcap_usd': market_cap,
-             'current_supply': None,
-             'update_time': datetime.datetime.now().timestamp(),
-             'resource': 'https://bitcoincharts.com/bitcoin/'
-            }
+    dict_ = insert_into_list(
+        'Bitcoin',
+        'BTC', market_cap,
+        '',
+        resource='https://bitcoincharts.com/bitcoin/')
     list_json.append(dict_)
 
     
@@ -40,13 +40,12 @@ def eth():
     soup = BeautifulSoup(html.text, 'html.parser')
     spans = soup.find_all('span')
     market_cap = spans[3].string
-    dict_ = {'name': 'Ethereum',
-             'symbol': 'ETH',
-             'marketcap_usd': market_cap,
-             'current_supply': None,
-             'update_time': datetime.datetime.now().timestamp(),
-             'resource': 'https://etherscan.io/stat/supply'
-            }
+    dict_ = insert_into_list(
+    'Ethereum',
+    'ETH',
+    market_cap,
+    '',
+    resource='https://etherscan.io/stat/supply')
     list_json.append(dict_)
     
 
@@ -59,15 +58,48 @@ def xlm():
     time.sleep(2)
     html = driver.page_source
     soup = BeautifulSoup(html, 'html.parser')
+    driver.quit()
     market_cap = soup.find(id='market_cap_usd').text
-    print(market_cap)
-    dict_ = {'name': 'Stellar',
-         'symbol': 'XLM',
-         'marketcap_usd': market_cap,
-         'current_supply': None,
-         'update_time': datetime.datetime.now().timestamp(),
-         'resource': 'https://etherscan.io/stat/supply'
-        }
+    dict_ = insert_into_list(
+    'Stellar',
+    'XLM',
+    market_cap,
+    '',
+    resource='https://stellarchain.io/')
+    list_json.append(dict_)
+    
+    
+def dash():
+    ch_op = Options()
+    ch_op.add_argument('--headless')
+    driver = webdriver.Chrome(executable_path=path, chrome_options=ch_op)
+    driver.get('https://www.dash.org/network/#section-exchanges')
+    time.sleep(2)
+    html = driver.page_source
+    soup = BeautifulSoup(html, 'html.parser')
+    driver.quit()
+    market_cap = soup.find(id='marketcap_count').text
+    dict_ = insert_into_list(
+    'Dash',
+    'DASH',
+    market_cap,
+    '',
+    'https://www.dash.org/network/#section-exchanges')
+    list_json.append(dict_)
+    
+    
+def xem():
+    html = requests.get('https://nem.io/es/inversores/')
+    soup = BeautifulSoup(html.text, 'html.parser')
+    div = soup.find_all(class_="network-value")[3].text
+    string = str(div)
+    items = string.split()
+    market_cap = items[0]
+    dict_ = insert_into_list('NEM',
+                           'XEM',
+                           market_cap,
+                           '',
+                           'https://nem.io/es/inversores/')
     list_json.append(dict_)
 
     
@@ -75,6 +107,8 @@ def xlm():
 btc()
 eth()
 xlm()
+dash()
+xem()
 print(list_json)
     
     
