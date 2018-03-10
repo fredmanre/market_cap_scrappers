@@ -25,10 +25,10 @@ ICX, no es preciso->https://www.icon.foundation/contents/icx/overviews?lang=en
 Binance(BNB), https://info.binance.com/currencies/binance-coin
 DGD, no tiene
 Steemit STEEM, https://steemd.com/
-BCN, https://bytecoin.org/
+Bytecoin(BCN), https://bytecoin.org/
 Waves(WAVES), http://wavesgo.com/stats
-PPT, https://populous.co/
-XVG, trae el supply->https://verge-blockchain.info/
+Populous(PPT), https://populous.co/
+XVG, no permite el scrapping->trae el supply->https://verge-blockchain.info/
 STRAT, no tiene
 SNT, no tiene
 MKR, no tiene

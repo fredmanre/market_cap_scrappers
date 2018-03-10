@@ -146,5 +146,60 @@ def steem():
     list_json.append(dict_)
 
 
-steem()
+def bcn():
+    resource = 'https://bytecoin.org/'
+    soup = extract_with_se(resource, 2)
+    div = soup.find_all('div', class_='hero-content')
+    div = div[0].find_all('div', class_='title')
+    market_cap = (div[0].text).split('$')[1]
+    dict_ = insert_into_list('Bytecoin', 'BCN', market_cap, '', resource)
+    list_json.append(dict_)
+
+
+def waves():
+    resource = 'http://wavesgo.com/stats'
+    soup = extract_with_se(resource, 2)
+    spans = soup.find_all('span')
+    market_cap = spans[4].text
+    dict_ = insert_into_list('Waves', 'WAVES', market_cap, '', resource)
+    list_json.append(dict_)
+
+
+def ppt():
+    resource = 'https://populous.co/'
+    soup = extract_with_se(resource, 2)
+    market_cap = soup.find_all('span', id='market-cap')[0].text
+    current = soup.find_all('span', id='max-supply')[0].text
+    dict_ = insert_into_list('Populous', 'PPT', market_cap, current, resource)
+    list_json.append(dict_)
+
+
+def kmd():
+    resource = 'http://kmd.komodochainz.info/'
+    soup = extract_with_se(resource, 2)
+    current = soup.find_all('label', id='supply')[0].text
+    market_cap = None
+    dict_ = insert_into_list('Komodo', 'KMD', market_cap, current, resource)
+    list_json.append(dict_)
+
+
+def veri():
+    resource = 'https://veritas.veritaseum.com/'
+    soup = extract_with_se(resource, 2)
+    market_cap = None
+    current = soup.find_all('span', id='circulating-supply')[0].text
+    dict_ = insert_into_list(
+        'Veritaseum', 'VERI', market_cap, current, resource)
+    list_json.append(dict_)
+
+
+def ardr():
+    resource = 'https://ardor.tools/charts/market/market_cap'
+    soup = extract_with_se(resource, 6)
+    span = soup.find_all('span')[-1].text
+    market_cap = span.split('$')[-1]
+    dict_ = insert_into_list('Ardor', 'ARDR', market_cap, '', resource)
+    list_json.append(dict_)
+
+
 print(list_json)
