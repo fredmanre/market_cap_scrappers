@@ -134,4 +134,17 @@ def bnb():
     list_json.append(dict_)
 
 
+def steem():
+    resource = 'https://steemd.com/'
+    soup = extract_with_bs(resource)
+    table = soup.find_all(
+        'table', class_='table table-condensed hash3 ultra-condensed')
+    td = table[0].find_all('td')
+    market_cap = (td[1].text).split('$')[1]
+    current = (td[9].text).split(' ')[0]
+    dict_ = insert_into_list('Steemit', 'STEEM', market_cap, current, resource)
+    list_json.append(dict_)
+
+
+steem()
 print(list_json)
