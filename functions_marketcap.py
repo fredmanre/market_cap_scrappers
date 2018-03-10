@@ -37,8 +37,7 @@ def btc():
 
 def eth():
     resource = 'https://etherscan.io/stat/supply'
-    html = requests.get(resource)
-    soup = BeautifulSoup(html.text, 'html.parser')
+    soup = extract_with_bs(resource)
     spans = soup.find_all('span')
     market_cap = spans[3].string
     dict_ = insert_into_list('Ethereum',
@@ -52,54 +51,28 @@ def eth():
 def xlm():
     resource = 'https://stellarchain.io/'
     # chrome options
-    ch_op = Options()
-    ch_op.add_argument('--headless')
-    driver = webdriver.Chrome(executable_path=path, chrome_options=ch_op)
-    driver.get('https://stellarchain.io/')
-    time.sleep(2)
-    html = driver.page_source
-    soup = BeautifulSoup(html, 'html.parser')
-    driver.quit()
+    soup = extract_with_se(resource, 2)
     market_cap = soup.find(id='market_cap_usd').text
-    dict_ = insert_into_list('Stellar',
-                             'XLM',
-                             market_cap,
-                             '',
-                             resource)
+    dict_ = insert_into_list('Stellar', 'XLM', market_cap, '', resource)
     list_json.append(dict_)
 
 
 def dash():
     resource = 'https://www.dash.org/network/#section-exchanges'
-    ch_op = Options()
-    ch_op.add_argument('--headless')
-    driver = webdriver.Chrome(executable_path=path, chrome_options=ch_op)
-    driver.get(resource)
-    time.sleep(2)
-    html = driver.page_source
-    soup = BeautifulSoup(html, 'html.parser')
-    driver.quit()
+    soup = extract_with_se(resource, 2)
     market_cap = soup.find(id='marketcap_count').text
-    dict_ = insert_into_list('Dash',
-                             'DASH',
-                             market_cap,
-                             '',
-                             resource)
+    dict_ = insert_into_list('Dash', 'DASH', market_cap, '', resource)
     list_json.append(dict_)
 
 
 def xem():
-    html = requests.get('https://nem.io/es/inversores/')
-    soup = BeautifulSoup(html.text, 'html.parser')
+    resource = 'https://nem.io/es/inversores/'
+    soup = extract_with_bs(resource)
     div = soup.find_all(class_="network-value")[3].text
     string = str(div)
     items = string.split()
     market_cap = items[0]
-    dict_ = insert_into_list('NEM',
-                             'XEM',
-                             market_cap,
-                             '',
-                             'https://nem.io/es/inversores/')
+    dict_ = insert_into_list('NEM', 'XEM', market_cap, '', resource)
     list_json.append(dict_)
 
 
@@ -112,5 +85,4 @@ def usdt():
     list_json.append(dict_)
 
 
-usdt()
 print(list_json)
