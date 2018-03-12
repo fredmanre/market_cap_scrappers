@@ -1,3 +1,4 @@
+import json
 import time
 import requests
 from bs4 import BeautifulSoup
@@ -239,9 +240,14 @@ def zcoin():
     list_json.append(dict_)
     
     
-def gxz():
+def gxs():
     resource = 'http://block.gxb.io/api/supply'
-    return
+    soup = extract_with_bs(resource)
+    data = json.loads(str(soup))
+    market_cap = None
+    current = str(data['circulating_supply'])
+    dict_ = insert_into_list('GXChain', 'GXA', market_cap, current, resource)
+    list_json.append(dict_)
     
 
 def emc():
@@ -251,6 +257,16 @@ def emc():
     market_cap = (div[0].find_all('span')[0].text).split(' ')[0]
     current = (div[2].find_all('span')[0].text).split(' ')[0]
     dict_ = insert_into_list('Emercoin', 'EMC', market_cap, current, resource)
+    list_json.append(dict_)
+    
+    
+def nxs():
+    resource = 'http://nxsorbitalscan.com/supply'
+    soup = extract_with_bs(resource)
+    td = soup.find_all('td')
+    current = (td[2].text).split(' ')[0]
+    market_cap = (td[4].text).split(' ')[0]
+    dict_ = insert_into_list('Nexus', 'nxs', market_cap, current, resource)
     list_json.append(dict_)
     
 
@@ -263,5 +279,9 @@ def maid():
     list_json.append(dict_)
     
 
-
-print(list_json)
+functions = eth(), xlm(), dash(), xem(), usdt(),
+lsk(), qtum(), btg(), zec(), bnb(), steem(), bcn(),
+waves(), ppt(), kmd(), veri(), ardr(), hsr(), part(),
+zcoin(), gxs(), emc(), nxs(), maid()
+functions
+print('currencies:', list_json)
