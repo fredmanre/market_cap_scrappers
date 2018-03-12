@@ -279,7 +279,7 @@ def maid():
     list_json.append(dict_)
     
 
-functions = eth(), xlm(), dash(), xem(), usdt(),
+functions = btc(), eth(), xlm(), dash(), xem(), usdt(),
 lsk(), qtum(), btg(), zec(), bnb(), steem(), bcn(),
 waves(), ppt(), kmd(), veri(), ardr(), hsr(), part(),
 zcoin(), gxs(), emc(), nxs(), maid()
