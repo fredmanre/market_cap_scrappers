@@ -254,5 +254,14 @@ def emc():
     list_json.append(dict_)
     
 
+def maid():
+    resource = 'http://omnichest.info/lookupsp.aspx?sp=3'
+    soup = extract_with_bs(resource)
+    markeet_cap = None
+    current = soup.find_all('span', id='ltotaltokens')[0].text
+    dict_ = insert_into_list('MaidSafeCoin', 'MAID', markeet_cap, current, resource)
+    list_json.append(dict_)
+    
+
 
 print(list_json)
