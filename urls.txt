@@ -53,7 +53,7 @@ Syscoin(SYS), no tiene
 dragonchain(drgn), supply->https://dragonchain.com/
 Basic Attention Token(BAT), no tiene
 Hshare(HSR), http://explorer.h.cash/
-Gas(GAS), page not repsonse->
+Gas(GAS), page not response->
 Golem(GNT), no tiene
 DigiByte(DGB), no tiene
 PIVS(PIVX), poco precisa->https://pivx.org/es/spanish-home-page/
@@ -66,3 +66,37 @@ Loopring(LRC), no tiene
 FunFair(FUN), no tiene
 ByteballBytes(GBYTE), no tiene
 Revain(R), poco preciso->https://revain.org/
+aelf(ELF), no tiene
+ReddCoin(RDD), max_supply->https://live.reddcoin.com/status
+Dentacoin(DCN), supply inpreciso->https://dentacoin.com/
+Particl(PART), supply->https://explorer.particl.io/status
+Zcoin(XZC), suppyl->https://explorer.zcoin.io/
+ChainLink(LINK), no tiene
+Kyber Network (KNC), no tiene
+GXChain (GXS), api->http://block.gxb.io/api/supply
+Kin (KIN), no tiene
+IOStoken (IOST), no tiene
+Salt(SALT), no tiene
+Polymath (POLY), no tiene
+Dent (DENT), no tiene
+Neblio (NEBL), no tiene
+Power Ledger (POWR), no tiene
+SmartCash (SMART), tiene el total_supply->https://explorer3.smartcash.cc/
+Emercoin (EMC), https://emercoin.com/en/rate
+Nxt (NXT), no tiene
+Bancor (BNT), no tiene
+Nexus (NXS), http://nxsorbitalscan.com/supply
+Iconomi (ICN), no tiene
+Storj (STORJ), no tiene
+SingularityNET (AGI), no tiene
+MaidSafeCoin (MAID), supply-http://omnichest.info/lookupsp.aspx?sp=3
+TenX (PAY), no tiene
+Request Network (REQ), no tiene
+SIRIN LABS Token (SRN), no tiene
+Enigma (ENG), no tiene
+Cindicator (CND), no tiene
+Pillar (PLR), no tiene
+Blocknet (BLOCK), no tiene
+Bitcore (BTX), poco preciso->https://bitcore.cc/
+Genesis Vision (GVT), no tiene
+Storm (STORM), no tiene

@@ -7,9 +7,8 @@ from selenium.webdriver.chrome.options import Options
 from functions import (insert_into_list,
                        extract_with_bs,
                        extract_with_se)
-# for dict function
 
-# path and setup to gekkodriver needed for selenium
+# path and setup to gekkodriver needed for selenium(linux)
 path = "/usr/lib64/chromium/chromedriver"
 # list of scrappers
 list_json = []
@@ -200,6 +199,60 @@ def ardr():
     market_cap = span.split('$')[-1]
     dict_ = insert_into_list('Ardor', 'ARDR', market_cap, '', resource)
     list_json.append(dict_)
+    
+    
+def drgn():
+    resource = 'https://dragonchain.com/'
+    soup = extract_with_se(resource, 2)
+    market_cap = None
+    div = soup.find_all(class_='_2ZrCYUsUiY7oxie2nF3JQT')[0].text
+    current = div.split(' ')[0]
+    dict_ = insert_into_list('Dragonchain', 'DRGN', market_cap, current, resource)
+    list_json.append(dict_)
+
+
+def hsr():
+    resource = 'http://explorer.h.cash/'
+    soup = extract_with_bs(resource)
+    em = soup.find_all('em', class_="fs-36 ff-g-black")[0].text
+    market_cap = em.split('$')[1]
+    dict_ = insert_into_list('Hshare', 'HSR', market_cap, '', resource)
+    list_json.append(dict_)
+
+
+def part():
+    resource = 'https://explorer.particl.io/status'
+    soup = extract_with_se(resource, 2)
+    td = soup.find_all('td', class_='text-right ng-binding')
+    market_cap = None
+    current = (td[6].text).split(' ')[0]
+    dict_ = insert_into_list('Particl', 'PART', market_cap, current, resource)
+    list_json.append(dict_)
+    
+    
+def zcoin():
+    resource = 'https://explorer.zcoin.io/'
+    soup = extract_with_se(resource, 2)
+    current = soup.find_all('label', id='supply')[0].text
+    market_cap = None
+    dict_ = insert_into_list('Zcoin', 'XZC', market_cap, current, resource)
+    list_json.append(dict_)
+    
+    
+def gxz():
+    resource = 'http://block.gxb.io/api/supply'
+    return
+    
+
+def emc():
+    resource = 'https://emercoin.com/en/rate'
+    soup = extract_with_bs(resource)
+    div = soup.find_all('div', class_='cost')
+    market_cap = (div[0].find_all('span')[0].text).split(' ')[0]
+    current = (div[2].find_all('span')[0].text).split(' ')[0]
+    dict_ = insert_into_list('Emercoin', 'EMC', market_cap, current, resource)
+    list_json.append(dict_)
+    
 
 
 print(list_json)
