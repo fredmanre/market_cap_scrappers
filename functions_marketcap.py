@@ -44,7 +44,8 @@ def eth():
         resource = 'https://etherscan.io/stat/supply'
         soup = extract_with_bs(resource)
         spans = soup.find_all('span')
-        market_cap = spans[3].string
+        current = spans[3].string
+        market_cap = spans[5].string
         dict_ = insert_into_list('Ethereum',
                                  'ETH',
                                  market_cap,
@@ -60,8 +61,9 @@ def xlm():
         resource = 'https://stellarchain.io/'
         # chrome options
         soup = extract_with_se(resource, 2)
+        current = None
         market_cap = soup.find(id='market_cap_usd').text
-        dict_ = insert_into_list('Stellar', 'XLM', market_cap, '', resource)
+        dict_ = insert_into_list('Stellar', 'XLM', market_cap, current, resource)
         list_json.append(dict_)
     except:
         pass
@@ -71,8 +73,9 @@ def dash():
     try:
         resource = 'https://www.dash.org/network/#section-exchanges'
         soup = extract_with_se(resource, 2)
+        current = None
         market_cap = soup.find(id='marketcap_count').text
-        dict_ = insert_into_list('Dash', 'DASH', market_cap, '', resource)
+        dict_ = insert_into_list('Dash', 'DASH', market_cap, current, resource)
         list_json.append(dict_)
     except:
         pass
@@ -85,8 +88,9 @@ def xem():
         div = soup.find_all(class_="network-value")[3].text
         string = str(div)
         items = string.split()
+        current = None
         market_cap = items[0]
-        dict_ = insert_into_list('NEM', 'XEM', market_cap, '', resource)
+        dict_ = insert_into_list('NEM', 'XEM', market_cap, current, resource)
         list_json.append(dict_)
     except:
         pass
@@ -97,8 +101,9 @@ def usdt():
         resource = 'https://wallet.tether.to/transparency'
         html = extract_with_se(resource, 4)
         td = html.find_all(class_='bold')[0].text
+        current = None
         market_cap = td.split('$')[1]
-        dict_ = insert_into_list('Tether', 'USDT', market_cap, '', resource)
+        dict_ = insert_into_list('Tether', 'USDT', market_cap, current, resource)
         list_json.append(dict_)
     except:
         pass
@@ -135,8 +140,9 @@ def btg():
         resource = 'https://btgexplorer.com/'
         soup = extract_with_se(resource, 2)
         span = soup.find(class_='b-market-cap-count ng-binding ng-scope').text
+        current = None
         market_cap = span.split('$')[1]
-        dict_ = insert_into_list('BitcoinGold', 'BTG', market_cap, '', resource)
+        dict_ = insert_into_list('BitcoinGold', 'BTG', market_cap, current, resource)
         list_json.append(dict_)
     except:
         pass
@@ -148,8 +154,9 @@ def zec():
         soup = extract_with_se(resource, 2)
         div = soup.find_all(class_='col-md-3 col-xs-6')[-2]
         div = div.find_all('div')[1].text
+        current = None
         market_cap = div.split('$')[1]
-        dict_ = insert_into_list('Zcash', 'ZEC', market_cap, '', resource)
+        dict_ = insert_into_list('Zcash', 'ZEC', market_cap, current, resource)
         list_json.append(dict_)
     except:
         pass
@@ -189,8 +196,9 @@ def bcn():
         soup = extract_with_se(resource, 2)
         div = soup.find_all('div', class_='hero-content')
         div = div[0].find_all('div', class_='title')
+        current = None
         market_cap = (div[0].text).split('$')[1]
-        dict_ = insert_into_list('Bytecoin', 'BCN', market_cap, '', resource)
+        dict_ = insert_into_list('Bytecoin', 'BCN', market_cap, current, resource)
         list_json.append(dict_)
     except:
         pass
@@ -201,6 +209,7 @@ def waves():
         resource = 'http://wavesgo.com/stats'
         soup = extract_with_se(resource, 2)
         spans = soup.find_all('span')
+        current = None
         market_cap = spans[4].text
         dict_ = insert_into_list('Waves', 'WAVES', market_cap, '', resource)
         list_json.append(dict_)
@@ -250,8 +259,9 @@ def ardr():
         resource = 'https://ardor.tools/charts/market/market_cap'
         soup = extract_with_se(resource, 6)
         span = soup.find_all('span')[-1].text
+        current = None
         market_cap = span.split('$')[-1]
-        dict_ = insert_into_list('Ardor', 'ARDR', market_cap, '', resource)
+        dict_ = insert_into_list('Ardor', 'ARDR', market_cap, current, resource)
         list_json.append(dict_)
     except:
         pass
@@ -275,8 +285,9 @@ def hsr():
         resource = 'http://explorer.h.cash/'
         soup = extract_with_bs(resource)
         em = soup.find_all('em', class_="fs-36 ff-g-black")[0].text
+        current = None
         market_cap = em.split('$')[1]
-        dict_ = insert_into_list('Hshare', 'HSR', market_cap, '', resource)
+        dict_ = insert_into_list('Hshare', 'HSR', market_cap, current, resource)
         list_json.append(dict_)
     except:
         pass
