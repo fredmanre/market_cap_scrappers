@@ -1,5 +1,4 @@
 import sys
-import pandas as pd
 import psycopg2
 
 
@@ -15,7 +14,7 @@ def market_caps():
     # connection to database
     try:
         conn = psycopg2.connect(
-            "host='localhost' dbname='' user='' password=''")
+            "host='localhost' dbname='marketcap_scrapper_test' user='fredmanre' password='perrodeagua'")
         print('connected to DATABASE!')
     except:
         print('Something failed!')
