@@ -47,7 +47,6 @@ Veritaseum(VERI), tiene supply->https://veritas.veritaseum.com/
 Electroneum(ETN), poco preciso->https://electroneum.com/
 Ark(ARK), no tiene
 Ardor(ARDR), https://ardor.tools/charts/market/market_cap
-----------------------------------------------------------
 Criptonex(CNX), poco preciso->https://cryptonex.org/
 Syscoin(SYS), no tiene
 dragonchain(drgn), supply->https://dragonchain.com/
@@ -99,4 +98,104 @@ Pillar (PLR), no tiene
 Blocknet (BLOCK), no tiene
 Bitcore (BTX), poco preciso->https://bitcore.cc/
 Genesis Vision (GVT), no tiene
+------------------------------------------------------
 Storm (STORM), no tiene
+SingularityNET (AGI), no tiene
+Storj (STORJ), no tiene
+Cindicator (CND), no tiene
+Blocknet (BLOCK), no tiene
+BitcoinDark (BTCD), no tiene
+Gnosis (GNO), no tiene
+Vertcoin (VTC), no tiene
+Achain (ACT), no tiene
+MinexCoin (MNX), no tiene
+Decentraland (MANA), no tiene
+Civic (CVC), no tiene
+Dynamic Trading Rights (DTR), https://www.tokens.net/
+Quantstamp (QSP), no tiene
+Theta Token (THETA), no tiene
+Monaco (MCO), no tiene
+Aragon (ANT), no tiene
+Raiden Network Token (RDN), no tiene
+iExec RLC (RLC), poco preciso->https://iex.ec/es/rlc-token/
+GameCredits (GAME), https://blockexplorer.gamecredits.com/home(revisar)
+Metal (MTL), no tiene
+Enjin Coin (ENJ), https://enjincoin.io/#market
+Ignis (IGNIS), no tiene
+Santiment Network Token (SAN), no tiene
+SaluS (SLS), http://www.presstab.pw/phpexplorer/SLS/
+PayPie (PPP), no tiene
+Skycoin (SKY), https://explorer.skycoin.net/app/blocks/1
+NavCoin (NAV), no tiene
+WAX (WAX), no tiene
+Ubiq (UBQ), https://ubiqscan.io/assets/
+Po.et (POE), no tiene
+Genaro Network (GNX), no tiene
+ZenCash (ZEN), https://zencash.com/
+Cube (AUTO), impreciso->https://cubeint.io/
+XPA (XPA), no tiene
+Arcblock (ABT), no tiene
+DigitalNote (XDN), no tiene
+DEW (DEW), https://dew.one/(pagina caida)
+Asch (XAS), https://explorer.asch.io/index.html
+Envion (EVN), no tiene
+Time New Bank (TNB), no tiene
+Einsteinium (EMC2), no tiene
+BridgeCoin (BCO), https://bridgecoin.org/
+High Performance Blockchain (HPB), no tiene
+Pura (PURA), poco precisa->https://pura.one/
+Nuls (NULS), no tiene
+Credits (CS), no tiene
+SophiaTX (SPHTX), https://www.sophiatx.com/
+Oyster (PRL), poco preciso->https://oysterprotocol.com/
+Edgeless (EDG), no tiene
+AdEx (ADX), no tiene
+Fusion (FSN), no tiene
+MediBloc (MED), no tiene
+ION (ION), no tiene
+Experience Points (XP), no tiene
+BLOCKv (VEE), no tiene
+ETHLend (LEND), no tiene
+Bluzelle (BLZ), poco preciso->https://bluzelle.com/
+Bibox Token (BIX), no tiene
+CRYPTO20 (C20), no tiene
+POA Network (POA), https://poaexplorer.com/
+SpankChain (SPANK), no tiene
+Ripio Credit Network (RCN), no tiene
+Jibrel Network (JNT), no tiene
+SpaceChain (SPC), no tiene
+Streamr DATAcoin (DATA), no tiene
+Feathercoin (FTC), solo tiene el maximo(https://www.feathercoin.com/)
+Simple Token (OST), no tiene
+SONM (SNM), no tiene
+MediShares (MDS), no tiene
+Peercoin (PPC), no tiene(poco preciso)
+Simple Token (OST), no tiene
+BitBay (BAY), no tiene
+XTRABYTES (XBY), https://xtrabytes.global/
+Wagerr (WGR), no tiene
+SmartMesh (SMT), https://smartmesh.io/smt-token/
+Pundi X (PXS), no tiene
+Telcoin (TEL), no tiene
+Ambrosus (AMB), no tiene
+Red Pulse (RPX), no tiene
+VIBE (VIBE), no tiene
+OriginTrail (TRAC), no tiene
+AirSwap (AST), no tiene
+Wings (WINGS), no tiene
+Quantum Resistant Ledger (QRL), no tiene
+KickCoin (KICK), no tiene
+Universa (UTNP), no tiene
+Eidoo (EDO), no tiene
+Ink (INK), no tiene
+TaaS (TAAS), no tiene
+AirSwap (AST), no tiene
+AppCoins (APPC), tiene el total
+Melon (MLN), no tiene
+SingularDTV (SNGLS), no tiene
+Burst (BURST), api-poco preciso extraido de un exchange(https://explore.burst.cryptoguru.org/api/v1/supply)
+IoT Chain (ITC), no tiene
+Gifto (GTO), no tiene
+MobileGo (MGO), no tiene
+INS Ecosystem (INS), no tiene
+UTRUST (UTK), no tiene
