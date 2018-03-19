@@ -14,7 +14,7 @@ now = datetime.datetime.now()
 
 
 def insert_into_list(name, symbol, market_cap, current_supply, resource):
-    if len(current_supply) > 0:
+    if current_supply is not None :
         current_supply = current_supply
     else:
         current_supply = None
