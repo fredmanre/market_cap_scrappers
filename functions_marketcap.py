@@ -243,7 +243,7 @@ def kmd():
 
 def veri():
     try:
-        resource = 'https://veritas.veritaseum.com/'
+        resource = 'http://veritas.veritaseum.com/'
         soup = extract_with_se(resource, 2)
         market_cap = None
         current = soup.find_all('span', id='circulating-supply')[0].text
