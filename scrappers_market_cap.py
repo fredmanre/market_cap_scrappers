@@ -14,13 +14,15 @@ def market_caps():
     # connection to database
     try:
         conn = psycopg2.connect(
-            "host='localhost' dbname='' user='' password=''")
+            "host='localhost' dbname='marketcap_scrapper_test' user='fredmanre' password='perrodeagua'")
         print('connected to DATABASE!')
     except:
         print('Something failed!')
     # loads all functions and add in list_json
     from functions_marketcap import functions, list_json
+    from scrappers_market import coins
     functions
+    coins
     list_ = list_json
     cur = conn.cursor()
     try:
