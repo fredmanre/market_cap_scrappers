@@ -98,7 +98,6 @@ Pillar (PLR), no tiene
 Blocknet (BLOCK), no tiene
 Bitcore (BTX), poco preciso->https://bitcore.cc/
 Genesis Vision (GVT), no tiene
-------------------------------------------------------
 Storm (STORM), no tiene
 SingularityNET (AGI), no tiene
 Storj (STORJ), no tiene
@@ -129,6 +128,7 @@ Skycoin (SKY), https://explorer.skycoin.net/app/blocks/1
 NavCoin (NAV), no tiene
 WAX (WAX), no tiene
 Ubiq (UBQ), https://ubiqscan.io/assets/
+
 Po.et (POE), no tiene
 Genaro Network (GNX), no tiene
 ZenCash (ZEN), https://zencash.com/
@@ -141,7 +141,7 @@ Asch (XAS), https://explorer.asch.io/index.html
 Envion (EVN), no tiene
 Time New Bank (TNB), no tiene
 Einsteinium (EMC2), no tiene
-BridgeCoin (BCO), https://bridgecoin.org/
+BridgeCoin (BCO), NO TIENE
 High Performance Blockchain (HPB), no tiene
 Pura (PURA), poco precisa->https://pura.one/
 Nuls (NULS), no tiene
