@@ -306,7 +306,7 @@ def part():
         pass
     
     
-def zcoin():
+def xzc():
     try:
         resource = 'https://explorer.zcoin.io/'
         soup = extract_with_se(resource, 2)
@@ -325,7 +325,7 @@ def gxs():
         data = json.loads(str(soup))
         market_cap = None
         current = str(data['circulating_supply'])
-        dict_ = insert_into_list('GXChain', 'GXA', market_cap, current, resource)
+        dict_ = insert_into_list('GXChain', 'GXS', market_cap, current, resource)
         list_json.append(dict_)
     except:
         pass
@@ -351,7 +351,7 @@ def nxs():
         td = soup.find_all('td')
         current = (td[2].text).split(' ')[0]
         market_cap = (td[4].text).split(' ')[0]
-        dict_ = insert_into_list('Nexus', 'nxs', market_cap, current, resource)
+        dict_ = insert_into_list('Nexus', 'NXS', market_cap, current, resource)
         list_json.append(dict_)
     except:
         pass
@@ -371,8 +371,8 @@ def maid():
 
 functions = [btc(), eth(), xlm(), dash(), xem(), usdt(), lsk(),
 qtum(), btg(), zec(), bnb(), steem(), bcn(), waves(),
-ppt(), kmd(), veri(), ardr(), drgn(), hsr(), part(),
-zcoin(), gxs(), emc(), nxs(), maid()]
+ppt(), kmd(), ardr(), drgn(), hsr(), part(),
+xzc(), gxs(), emc(), nxs(), maid(), veri()]
 
 
 # functions

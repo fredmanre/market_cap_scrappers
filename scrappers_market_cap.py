@@ -20,10 +20,10 @@ def market_caps():
         print('Something failed!')
     # loads all functions and add in list_json
     from functions_marketcap import functions, list_json
-    from scrappers_market import coins, list_json as lis
+    # from scrappers_market import coins, list_json as lis
     functions
-    coins
-    list_ = list_json + lis
+    # coins
+    list_ = list_json
     cur = conn.cursor()
     try:
         for cripto in list_:
@@ -46,5 +46,11 @@ def market_caps():
             print('database closed!')
 
 
-market_caps()
+def main():
+    market_caps()
+    
+    
+if __name__ == '__main__':
+    main()
+    
         
