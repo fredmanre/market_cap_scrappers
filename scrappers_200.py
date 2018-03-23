@@ -55,14 +55,8 @@ def sls():
         list_json.append(dict_)
     except:
         pass
-<<<<<<< HEAD:scrappers_200.py
 
 
-
-=======
-        
-        
->>>>>>> master:scrappers_market.py
 def sky():
     resource = 'https://explorer.skycoin.net/app/blocks/1'
     try:
@@ -123,8 +117,8 @@ def spxtx():
         list_json.append(dict_)
     except:
         pass
-    
-    
+
+
 def  poa():
     resource = 'https://poaexplorer.com/'
     try:
@@ -160,14 +154,10 @@ def smt():
         list_json.append(dict_)
     except:
         pass
-<<<<<<< HEAD:scrappers_200.py
 
 
-=======
-        
-        
->>>>>>> master:scrappers_market.py
 coins = dtr(), game(), enj(), sls(), sky(), ubq(), zen(), xas(), spxtx(), poa(), xby(), smt()
 
-for l in list_json:
-    print(l, end='\n')
+print('currencies:', len(list_json))
+for i in list_json:
+    print(i['symbol'],i['marketcap_usd'],i['current_supply'], end="\n")
