@@ -1,12 +1,10 @@
-import sys
-# import psycopg2
-
-from functions import (insert_into_list,
-                       extract_with_bs,
-                       extract_with_se)
+from lib.functions import (insert_into_list,
+                           extract_with_bs,
+                           extract_with_se)
 
 # empbty list
 list_json = []
+
 
 def dtr():
     resource = 'https://www.tokens.net/'
@@ -19,8 +17,8 @@ def dtr():
                              current,
                              resource)
     list_json.append(dict_)
-    
-    
+
+
 def game():
     resource = 'https://blockexplorer.gamecredits.com/home'
     try:
@@ -32,8 +30,8 @@ def game():
         list_json.append(dict_)
     except:
         pass
-        
-        
+
+
 def enj():
     resource = 'https://enjincoin.io/#market'
     try:
@@ -44,7 +42,8 @@ def enj():
         list_json.append(dict_)
     except:
         pass
-    
+
+
 def sls():
     resource = 'http://www.presstab.pw/phpexplorer/SLS/'
     try:
@@ -56,8 +55,9 @@ def sls():
         list_json.append(dict_)
     except:
         pass
-        
-        
+
+
+
 def sky():
     resource = 'https://explorer.skycoin.net/app/blocks/1'
     try:
@@ -69,7 +69,7 @@ def sky():
         list_json.append(dict_)
     except:
         pass
-    
+
 
 def ubq():
     resource = 'https://ubiqscan.io/assets/'
@@ -94,8 +94,8 @@ def zen():
         list_json.append(dict_)
     except:
         pass
-    
-    
+
+
 def xas():
     resource = 'https://explorer.asch.io/index.html'
     try:
@@ -106,8 +106,8 @@ def xas():
         list_json.append(dict_)
     except:
         pass
-    
-    
+
+
 def spxtx():
     resource = 'https://www.sophiatx.com/es.html'
     try:
@@ -130,7 +130,7 @@ def  poa():
         list_json.append(dict_)
     except:
         pass
-    
+
 
 def xby():
     resource = 'https://xtrabytes.global/'
@@ -142,7 +142,7 @@ def xby():
         list_json.append(dict_)
     except:
         pass
-    
+
 
 def smt():
     resource = 'https://smartmesh.io/smt-token/'
@@ -155,8 +155,8 @@ def smt():
         list_json.append(dict_)
     except:
         pass
-        
-        
+
+
 coins = dtr(), game(), enj(), sls(), sky(), ubq(), zen(), xas(), spxtx(), poa(), xby(), smt()
 
 for l in list_json:

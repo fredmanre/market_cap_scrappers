@@ -19,19 +19,18 @@ def market_caps():
     except:
         print('Something failed!')
     # loads all functions and add in list_json
-    from functions_marketcap import functions, list_json
-    from scrappers_market import coins, list_json as lis
-    #functions
+    from scrappers_100 import functions, list_json
+    # functions
     coins
-    list_ = list_json + lis
+    list_ = list_json
     cur = conn.cursor()
     try:
         for cripto in list_:
             cur.execute(insert + fields + values, (
                 cripto['name'],
                 cripto['symbol'],
-                str(cripto['marketcap_usd']),
-                str(cripto['current_supply']),
+                cripto['marketcap_usd'],
+                cripto['current_supply'],
                 None,
                 cripto['resource'],
                 cripto['update_time']))
@@ -48,9 +47,7 @@ def market_caps():
 
 def main():
     market_caps()
-    
-    
+
+
 if __name__ == '__main__':
     main()
-    
-        

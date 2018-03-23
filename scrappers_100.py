@@ -5,9 +5,9 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 # functions
-from functions import (insert_into_list,
-                       extract_with_bs,
-                       extract_with_se)
+from lib.functions import (insert_into_list,
+                           extract_with_bs,
+                           extract_with_se)
 
 # path and setup to gekkodriver needed for selenium(linux)
 path = "/usr/lib64/chromium/chromedriver"
@@ -15,6 +15,7 @@ path = "/usr/lib64/chromium/chromedriver"
 list_json = []
 
 
+# functions to scrappers in official web pages.
 def btc():
     try:
         html = requests.get('https://bitcoincharts.com/bitcoin/')
@@ -265,7 +266,7 @@ def ardr():
         list_json.append(dict_)
     except:
         pass
-    
+
 
 def drgn():
     try:
@@ -304,8 +305,8 @@ def part():
         list_json.append(dict_)
     except:
         pass
-    
-    
+
+
 def xzc():
     try:
         resource = 'https://explorer.zcoin.io/'
@@ -316,8 +317,8 @@ def xzc():
         list_json.append(dict_)
     except:
         pass
-    
-    
+
+
 def gxs():
     try:
         resource = 'http://block.gxb.io/api/supply'
@@ -329,7 +330,7 @@ def gxs():
         list_json.append(dict_)
     except:
         pass
-    
+
 
 def emc():
     try:
@@ -342,8 +343,8 @@ def emc():
         list_json.append(dict_)
     except:
         pass
-    
-    
+
+
 def nxs():
     try:
         resource = 'http://nxsorbitalscan.com/supply'
@@ -355,25 +356,30 @@ def nxs():
         list_json.append(dict_)
     except:
         pass
-    
 
+
+# caida
 def maid():
     try:
         resource = 'http://omnichest.info/lookupsp.aspx?sp=3'
         soup = extract_with_bs(resource)
-        markeet_cap = None
+        market_cap = None
         current = soup.find_all('span', id='ltotaltokens')[0].text
-        dict_ = insert_into_list('MaidSafeCoin', 'MAID', markeet_cap, current, resource)
+        dict_ = insert_into_list(
+            'MaidSafeCoin', 'MAID', market_cap, current, resource)
         list_json.append(dict_)
     except:
         pass
-    
 
-functions = [btc(), eth(), xlm(), dash(), xem(), usdt(), lsk(),
-qtum(), btg(), zec(), bnb(), steem(), bcn(), waves(),
-ppt(), kmd(), ardr(), drgn(), hsr(), part(),
-xzc(), gxs(), emc(), nxs(), maid(), veri()]
+
+functions = [
+            btc(), eth(), xlm(), dash(), xem(), usdt(), lsk(),
+            qtum(), btg(), zec(), bnb(), steem(), bcn(), waves(),
+            ppt(), kmd(), ardr(), drgn(), hsr(), part(),
+            xzc(), gxs(), emc(), nxs(), maid(), veri()]
 
 
 # functions
-print('currencies:', list_json)
+print('currencies:', len(list_json))
+for i in list_json:
+    print(i['symbol'],i['marketcap_usd'],i['current_supply'], end="\n")
