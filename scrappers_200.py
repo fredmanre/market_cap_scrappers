@@ -156,8 +156,10 @@ def smt():
         pass
 
 
-coins = dtr(), game(), enj(), sls(), sky(), ubq(), zen(), xas(), spxtx(), poa(), xby(), smt()
+coins = [dtr(), game(), enj(), sls(), sky(), ubq(),
+         zen(), xas(), spxtx(), poa(), xby(), smt()]
 
-print('currencies:', len(list_json))
-for i in list_json:
-    print(i['symbol'],i['marketcap_usd'],i['current_supply'], end="\n")
+
+# print('currencies:', len(list_json))
+# for i in list_json:
+# print(i['symbol'],i['marketcap_usd'],i['current_supply'], end="\n")
