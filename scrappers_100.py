@@ -169,7 +169,7 @@ def bnb():
         soup = extract_with_bs(resource)
         strongs = soup.find_all('strong')
         market_cap = strongs[3].text
-        current = strongs[5].text
+        current = (strongs[5].text).split(' ')[0]
         dict_ = insert_into_list('Binance', 'BNB', market_cap, current, resource)
         list_json.append(dict_)
     except:
@@ -212,7 +212,7 @@ def waves():
         spans = soup.find_all('span')
         current = None
         market_cap = spans[4].text
-        dict_ = insert_into_list('Waves', 'WAVES', market_cap, '', resource)
+        dict_ = insert_into_list('Waves', 'WAVES', market_cap, current, resource)
         list_json.append(dict_)
     except:
         pass
