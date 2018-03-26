@@ -111,3 +111,7 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+
+# archivos de prueba
+prueba11.py
