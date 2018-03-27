@@ -13,7 +13,7 @@ df = pd.DataFrame(columns=("name",
                            "current_supply",
                            "update_time"))
 
-sym = get_data(1000)
+sym = get_data(0)
 
 # recorremos todos los años con sus respectivos meses
 for year in enlaces:
@@ -36,7 +36,7 @@ for year in enlaces:
         for i in range(100):
             n = name[i].text
             s = sym.get(n, 'change')
-            mc = market_cap[i].text.replace("\n", "").replace(" ", "").replace("$", "")
+            mc = market_cap[i].text.replace("\n", "").replace(" ", "").replace("$", "").replace(",", "")
             p = price[i].text.replace("$", "")
             v = volume_24[i].text.replace("$", "").replace(',', '')
             cs = circ_sup[i].text.split('\n')[2].replace(',', '')
