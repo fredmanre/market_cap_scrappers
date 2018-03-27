@@ -29,12 +29,14 @@ for year in enlaces:
         date = fecha
         change_24 = soup.find_all(class_="no-wrap percent-change")
         # recorremos 5 monedas para cada año y cada mes
-        for i in range(5):
+        print(year, month)
+        for i in range(100):
             n = name[i].text
             mc = market_cap[i].text.replace("\n", "").replace(" ", "").replace("$", "")
             p = price[i].text.replace("$", "")
             v = volume_24[i].text.replace("$", "").replace(',', '')
             cs = circ_sup[i].text.split('\n')[2].replace(',', '')
+            print(n,mc,p,v,cs)
             # df.loc[i] = n, mc, p, v, cs, date
             # dataframe temporal para almacenar una fila de datos
             new_df = pd.DataFrame([
@@ -46,11 +48,12 @@ for year in enlaces:
                          "Circulating_Supply",
                          "date"))
             # imprimimos la fila para verificarla
-            print(new_df)
+            #print(new_df)
             # añadimos la fila al dataframe creado
-            df.append(new_df, ignore_index=True)
+            df = pd.concat([df,new_df])
 
-
-# print(df)
+df.set_index('date', inplace=True)
+df.sort_index(inplace=True)
+print(df)
 # convertimos nuestro dataframe a csv
-df.to_csv('marketcap_past.csv', mode='r+')
+df.to_csv('marketcap_past.csv')
