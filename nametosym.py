@@ -10,14 +10,14 @@ import json
 
 
 def get_data(cant):
-    r = requests.get("https://api.coinmarketcap.com/v1/ticker/?limit={}".format(cant))
+    resource = "https://api.coinmarketcap.com/v1/ticker/?limit="
+    r = requests.get(resource+"{}".format(cant))
     coins = r.json()
     names_to_sym = {}
     for coin in coins:
         names_to_sym[coin['name']] = coin['symbol']
 
     return names_to_sym
-
 
 
 def main():
