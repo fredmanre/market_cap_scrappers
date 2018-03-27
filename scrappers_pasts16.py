@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup as bs
 import pandas as pd
-from lib.links20162018 import enlaces
+from lib.links20162018 import enlaces2
 
 # dataframe empty
 df = pd.DataFrame(columns=("Name",
@@ -55,6 +55,5 @@ df.set_index('date', inplace=True)
 df.sort_index(inplace=True)
 print(df)
 # we convert our dataframe in csv
-df.to_csv('marketcap_past.csv', mode="w+")
-list_dict = df.read_csv('marketcap_past.csv')
-dict_ = list_dict.to_dict('records')
+df.to_csv('marketcap_past16.csv', mode="w+")
+list_dict = df.read_csv('marketcap_past16.csv')

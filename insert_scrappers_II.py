@@ -19,18 +19,10 @@ def market_caps():
     except:
         print('Something failed!')
     # loads all functions and add in list_json
-<<<<<<< HEAD:insert_scrappers_II.py
     from scrappers_200 import coins, list_json
     # functions
     coins
     list_ = list_json
-=======
-    from functions_marketcap import functions, list_json
-    from scrappers_market import coins, list_json as lis
-    #functions
-    coins
-    list_ = list_json + lis
->>>>>>> master:scrappers_market_cap.py
     cur = conn.cursor()
     try:
         for cripto in list_:
