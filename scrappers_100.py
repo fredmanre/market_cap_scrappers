@@ -126,7 +126,7 @@ def lsk():
 def qtum():
     try:
         resource = 'https://explorer.qtum.org/'
-        soup = extract_with_se(resource, 2)
+        soup = extract_with_se(resource, 4)
         div = soup.find_all('div', class_='label ng-binding')
         current = ((div[1].text).split(' '))[0]
         market_cap = ((div[8].text).split(' '))[0]
@@ -382,4 +382,4 @@ functions = [
 # functions
 print('currencies:', len(list_json))
 for i in list_json:
-    print(i['symbol'],i['marketcap_usd'],i['current_supply'], end="\n")
+    print(i['symbol'],i['marketcap_usd'],i['current_supply'], i['update_time'], end="\n")

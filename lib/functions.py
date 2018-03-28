@@ -10,9 +10,9 @@ import datetime
 
 # variables
 path = "/usr/lib64/chromium/chromedriver"
-now = datetime.datetime.now()
+now = str(datetime.datetime.now())
 
-
+# insert n elements in a dict
 def insert_into_list(name, symbol, market_cap, current_supply, resource):
     if current_supply is not None:
         current_supply = float(current_supply.replace(',', ''))
@@ -31,6 +31,7 @@ def insert_into_list(name, symbol, market_cap, current_supply, resource):
     return dict_
 
 
+# to bring a manipulable web page with selenium and beatifulsoup
 def extract_with_se(url, sleep):
     # chrome options
     ch_op = Options()
@@ -44,7 +45,18 @@ def extract_with_se(url, sleep):
     return html
 
 
+# to bring a manipulable web page with beatifulsoup
 def extract_with_bs(route):
     html = requests.get(route)
     soup = BeautifulSoup(html.text, 'html.parser')
     return soup
+
+
+# converts a list of tuples into a dict
+def convert_dict(list_):
+    try:
+        dict_ = dict(list_)
+        return dict_
+    except:
+        print("object no convertible in dict")
+        return

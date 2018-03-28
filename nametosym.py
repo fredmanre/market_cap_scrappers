@@ -54,7 +54,7 @@ def get_data(cant):
     names_to_sym['NautilusCoin'] = "NAUT"  # inactive
     names_to_sym['Xiaomicoin'] = "MI"  # inactive
     names_to_sym['BlockShares'] = "BKS"  # inactive
-    names_to_sym['DogeCoinDark'] = "DODGE"
+    names_to_sym['DogeCoinDark'] = "XVG"
     names_to_sym['InstantDEX'] = "DEX"  # inactive
     names_to_sym['Tickets'] = "TIX"
     names_to_sym['CoinoUSD'] = "XUSD"  # inactive
