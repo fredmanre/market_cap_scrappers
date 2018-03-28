@@ -1,7 +1,5 @@
-import sys
 import psycopg2
-from lib.functions import convert_dict as cd
-
+import pandas as pd
 
 def market_caps():
     """
@@ -10,7 +8,7 @@ def market_caps():
     :param list_json: returns a list with data refered of criptocurrencys
     """
     insert = "INSERT INTO m_pesos"
-    fields = "(symbol, marketcap, current_supply, fuente, timestamp_real)"
+    fields = "(symbol, marketcap, current_supply, fuente, timestampfield)"
     values = " VALUES(%s, %s, %s, %s, %s)"
     # connection to database
     try:
@@ -20,13 +18,13 @@ def market_caps():
     except:
         print('Something failed!')
     cur = conn.cursor()
+    # file .csv with data of the past 
+    list_dict = pd.read_csv('marketcap_past.csv')
+    dict_ = list_dict.to_dict('records')
     # cur.execute("select symbol, id_m_criptomoneda from m_criptomoneda")
     # b = cur.fetchall()
     # c = dict(b)  # id_m_criptomoneda from m_criptomoneda
     # loads all functions and add in list_json
-    from scrappers_100 import functions, list_json
-    # functions
-    list_ = list_json
     try:
         for cripto in list_:
             cur.execute(insert + fields + values, (

@@ -382,4 +382,4 @@ functions = [
 # functions
 print('currencies:', len(list_json))
 for i in list_json:
-    print(i['symbol'],i['marketcap_usd'],i['current_supply'], end="\n")
+    print(i['symbol'],i['marketcap_usd'],i['current_supply'], i['update_time'], end="\n")

@@ -10,7 +10,7 @@ import datetime
 
 # variables
 path = "/usr/lib64/chromium/chromedriver"
-now = datetime.datetime.now()
+now = str(datetime.datetime.now())
 
 # insert n elements in a dict
 def insert_into_list(name, symbol, market_cap, current_supply, resource):
