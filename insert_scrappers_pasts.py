@@ -1,5 +1,8 @@
-import psycopg2
 import pandas as pd
+import psycopg2
+import math
+import sys
+
 
 def market_caps():
     """
@@ -7,8 +10,10 @@ def market_caps():
     :param function: get functions of market_cap
     :param list_json: returns a list with data refered of criptocurrencys
     """
+    list_dict = pd.read_csv('marketcap_past.csv')
+    dict_ = list_dict.to_dict('records')
     insert = "INSERT INTO m_pesos"
-    fields = "(symbol, marketcap, current_supply, fuente, timestampfield)"
+    fields = "(symbol, marketcap, current_supply, fuente, timestamp_real)"
     values = " VALUES(%s, %s, %s, %s, %s)"
     # connection to database
     try:
@@ -18,26 +23,21 @@ def market_caps():
     except:
         print('Something failed!')
     cur = conn.cursor()
-    # file .csv with data of the past 
-    list_dict = pd.read_csv('marketcap_past.csv')
-    dict_ = list_dict.to_dict('records')
-    # cur.execute("select symbol, id_m_criptomoneda from m_criptomoneda")
-    # b = cur.fetchall()
-    # c = dict(b)  # id_m_criptomoneda from m_criptomoneda
-    # loads all functions and add in list_json
     try:
-        for cripto in list_:
-            cur.execute(insert + fields + values, (
-                cripto['symbol'],
-                cripto['marketcap_usd'],
-                cripto['current_supply'],
-                cripto['resource'],
-                cripto['update_time']))
+        for js in dict_:
+            if math.isnan(js['current_supply']):
+                supply = 0.0
+            else:
+                supply = js['current_supply']
+            cur.execute(insert + fields + values, (js['symbol'],
+                                                   js['marketcap_usd'],
+                                                   supply,
+                                                   'www.coinmarketcap.com',
+                                                   js['update_time']))
         print('data inserted with success!')
         conn.commit()
-    except:
-        print('something failed in query!')
-        sys.exit(1)
+    #except:
+    #    print('something fail in query!')
     finally:
         if conn:
             conn.close()
