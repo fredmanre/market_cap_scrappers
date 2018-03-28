@@ -1,5 +1,6 @@
 import sys
 import psycopg2
+from lib.functions import convert_dict as cd
 
 
 def market_caps():
@@ -14,14 +15,17 @@ def market_caps():
     # connection to database
     try:
         conn = psycopg2.connect(
-            "host='localhost' dbname='marketcap_scrapper_test' user='fredmanre' password='perrodeagua'")
+            "host='localhost' dbname='bita52_des' user='fredmanre' password='perrodeagua'")
         print('connected to DATABASE!')
     except:
         print('Something failed!')
+    cur = conn.cursor()
+    # cur.execute("select symbol, id_m_criptomoneda from m_criptomoneda")
+    # b = cur.fetchall()
+    # c = dict(b)  # id_m_criptomoneda from m_criptomoneda
     # loads all functions and add in list_json
     from scrappers_100 import functions, list_json
     # functions
-    coins
     list_ = list_json
     cur = conn.cursor()
     try:
