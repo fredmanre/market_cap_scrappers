@@ -126,7 +126,7 @@ def lsk():
 def qtum():
     try:
         resource = 'https://explorer.qtum.org/'
-        soup = extract_with_se(resource, 2)
+        soup = extract_with_se(resource, 4)
         div = soup.find_all('div', class_='label ng-binding')
         current = ((div[1].text).split(' '))[0]
         market_cap = ((div[8].text).split(' '))[0]
