@@ -15,7 +15,7 @@ df = pd.DataFrame(columns=("name",
 
 sym = get_data(0)
 
-# recorremos todos los años con sus respectivos meses
+# we travel the years with their months
 for year in enlaces:
     for month in enlaces[year]:
         enlace = enlaces[year][month]['link']
@@ -31,7 +31,7 @@ for year in enlaces:
         volume_24 = soup.find_all(class_="volume")
         circ_sup = soup.find_all(class_="no-wrap text-right circulating-supply")
         date = fecha
-        # we travel coins for earch year and each month
+        # we replace to insert in dataframe
         print(year, month)
         for i in range(100):
             n = name[i].text

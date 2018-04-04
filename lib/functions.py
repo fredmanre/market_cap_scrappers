@@ -12,6 +12,7 @@ import datetime
 path = "/usr/lib64/chromium/chromedriver"
 now = str(datetime.datetime.now())
 
+
 # insert n elements in a dict
 def insert_into_list(name, symbol, market_cap, current_supply, resource):
     if current_supply is not None:
