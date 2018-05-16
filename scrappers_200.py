@@ -7,10 +7,10 @@ list_json = []
 
 
 def dtr():
-    resource = 'https://www.tokens.net/'
-    soup = extract_with_se(resource, 2)
-    market_cap = soup.find('span', id='dtr_cap').text[1:]
-    current = None
+    resource = 'https://etherscan.io/token/0xd234bf2410a0009df9c3c63b610c09738f18ccd7#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
     dict_ = insert_into_list('DynamicTradingRights',
                              'DTR',
                              market_cap,
@@ -73,7 +73,7 @@ def sky():
 def ubq():
     resource = 'https://ubiqscan.io/assets/'
     try:
-        soup = extract_with_se(resource, 2)
+        soup = extract_with_se(resource, 3)
         current = soup.find('td', id='ubiqAvailableSupply').text
         market_cap = soup.find('td', id='ubiqMarketcap').text
         dict_ = insert_into_list('Ubiq', 'UBQ', market_cap, current, resource)
