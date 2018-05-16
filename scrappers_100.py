@@ -14,7 +14,7 @@ path = "/usr/lib64/chromium/chromedriver"
 # list of scrappers
 list_json = []
 
-
+# 7H5PCG22WPH37HUIMTD1TKK6HHN4ZAGYSA
 # functions to scrappers in official web pages.
 def btc():
     try:
@@ -180,11 +180,10 @@ def steem():
     try:
         resource = 'https://steemd.com/'
         soup = extract_with_bs(resource)
-        table = soup.find_all(
-            'table', class_='table table-condensed hash3 ultra-condensed')
-        td = table[0].find_all('td')
-        market_cap = (td[1].text).split('$')[1]
-        current = (td[9].text).split(' ')[0]
+        divs = soup.find_all('div', class_='val')
+        market_cap = divs[0].text.split('$')[1].split('@')[0]
+        market_cap = ''.join(market_cap)
+        current = ''.join(divs[6].text.split(' ')[0].split(','))
         dict_ = insert_into_list('Steemit', 'STEEM', market_cap, current, resource)
         list_json.append(dict_)
     except:
@@ -193,12 +192,11 @@ def steem():
 
 def bcn():
     try:
-        resource = 'https://bytecoin.org/'
-        soup = extract_with_se(resource, 2)
-        div = soup.find_all('div', class_='hero-content')
-        div = div[0].find_all('div', class_='title')
-        current = None
-        market_cap = (div[0].text).split('$')[1]
+        resource = 'https://chainradar.com/bcn/blocks'
+        soup = extract_with_bs(resource)
+        td = soup.find_all('td', class_='info-data')
+        current = ''.join(td[1].text.split("'"))
+        market_cap = None
         dict_ = insert_into_list('Bytecoin', 'BCN', market_cap, current, resource)
         list_json.append(dict_)
     except:
@@ -350,8 +348,8 @@ def nxs():
         resource = 'http://nxsorbitalscan.com/supply'
         soup = extract_with_bs(resource)
         td = soup.find_all('td')
-        current = (td[2].text).split(' ')[0]
-        market_cap = (td[4].text).split(' ')[0]
+        current = (td[5].text).split(' ')[0]
+        market_cap = (td[7].text).split(' ')[0]
         dict_ = insert_into_list('Nexus', 'NXS', market_cap, current, resource)
         list_json.append(dict_)
     except:
@@ -361,7 +359,7 @@ def nxs():
 # caida
 def maid():
     try:
-        resource = 'http://omnichest.info/lookupsp.aspx?sp=3'
+        resource = 'https://www.omniexplorer.info/asset/3'
         soup = extract_with_bs(resource)
         market_cap = None
         current = soup.find_all('span', id='ltotaltokens')[0].text
@@ -371,12 +369,12 @@ def maid():
     except:
         pass
 
-
+# gxs(), maid(),
 functions = [
             btc(), eth(), xlm(), dash(), xem(), usdt(), lsk(),
             qtum(), btg(), zec(), bnb(), steem(), bcn(), waves(),
             ppt(), kmd(), ardr(), drgn(), hsr(), part(),
-            xzc(), gxs(), emc(), nxs(), maid(), veri()]
+            xzc(), emc(), nxs(), veri()]
 
 
 # functions
