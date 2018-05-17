@@ -89,12 +89,12 @@ Iconomi (ICN), no tiene
 Storj (STORJ), no tiene
 SingularityNET (AGI), no tiene
 MaidSafeCoin (MAID), supply-http://omnichest.info/lookupsp.aspx?sp=3
-TenX (PAY), no tiene
-Request Network (REQ), no tiene
-SIRIN LABS Token (SRN), no tiene
-Enigma (ENG), no tiene
-Cindicator (CND), no tiene
-Pillar (PLR), no tiene
+TenX (PAY), etherscan
+Request Network (REQ), etherscan
+SIRIN LABS Token (SRN), etherscan
+Enigma (ENG), etherscan
+Cindicator (CND), etherscan
+Pillar (PLR), etherscan
 Blocknet (BLOCK), no tiene
 Bitcore (BTX), poco preciso->https://bitcore.cc/
 Genesis Vision (GVT), no tiene
@@ -128,7 +128,6 @@ Skycoin (SKY), https://explorer.skycoin.net/app/blocks/1
 NavCoin (NAV), no tiene
 WAX (WAX), no tiene
 Ubiq (UBQ), https://ubiqscan.io/assets/
-
 Po.et (POE), no tiene
 Genaro Network (GNX), no tiene
 ZenCash (ZEN), https://zencash.com/

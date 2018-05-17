@@ -513,12 +513,104 @@ def maid():
         pass
 
 
+def pay():
+    resource = 'https://etherscan.io/token/TenXPay#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('TenX',
+                             'PAY',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def req():
+    resource = 'https://etherscan.io/token/0x8f8221afbb33998d8584a2b05749ba73c37a938a#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('RequestNetwork',
+                             'REQ',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def srn():
+    resource = 'https://etherscan.io/token/0x68d57c9a1c35f63e2c83ee8e49a64e9d70528d25#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('SIRILabsToken',
+                             'SRN',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def eng():
+    resource = 'https://etherscan.io/token/0xf0ee6b27b759c9893ce4f094b49ad28fd15a23e4#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('Enigma',
+                             'ENG',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def cnd():
+    resource = 'https://etherscan.io/token/0xd4c435f5b09f855c3317c8524cb1f586e42795fa#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('Cindicator',
+                             'CND',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def plr():
+    resource = 'https://etherscan.io/token/0xe3818504c1b32bf1557b16c238b2e01fd3149c17#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('Pillar',
+                             'PLR',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def gvt():
+    resource = 'https://etherscan.io/token/0x103c3a209da59d3e7c4a89307e66521e081cfdf0#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('GenesisVision',
+                             'GVT',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
 # gxs(), maid(),
 functions = [
             btc(), eth(), eos(), ven(), omg(), snt(), mkr(), xlm(), dash(),
             xem(), usdt(), lsk(), qtum(), btg(), zec(), bnb(), steem(), bcn(),
             waves(), ppt(), kmd(), ardr(), drgn(), hsr(), part(), rhoc(),
-            wtc(), ae(), zrx(), rep(), xzc(), emc(), nxs(), veri(), btm()]
+            wtc(), ae(), zrx(), rep(), xzc(), emc(), nxs(), veri(), btm(),
+            pay(), req(), srn(), eng(), cnd(), plr(), gvt()]
 
 
 # functions
