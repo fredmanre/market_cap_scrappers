@@ -187,6 +187,19 @@ def zrx():
     list_json.append(dict_)
 
 
+def btm():
+    resource = 'https://etherscan.io/token/0xcb97e65f07da24d46bcdd078ebebd7c6e6e3d750#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('Bytom',
+                             'BTM',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
 def xlm():
     try:
         resource = 'https://stellarchain.io/'
@@ -505,7 +518,7 @@ functions = [
             btc(), eth(), eos(), ven(), omg(), snt(), mkr(), xlm(), dash(),
             xem(), usdt(), lsk(), qtum(), btg(), zec(), bnb(), steem(), bcn(),
             waves(), ppt(), kmd(), ardr(), drgn(), hsr(), part(), rhoc(),
-            wtc(), ae(), zrx(), rep(), xzc(), emc(), nxs(), veri()]
+            wtc(), ae(), zrx(), rep(), xzc(), emc(), nxs(), veri(), btm()]
 
 
 # functions
