@@ -57,6 +57,136 @@ def eth():
         pass
 
 
+def eos():
+    resource = 'https://etherscan.io/token/EOS#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('eos',
+                             'EOS',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def ven():
+    resource = 'https://etherscan.io/token/0xd850942ef8811f2a866692a623011bde52a462c1#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('VeChain',
+                             'VEN',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def omg():
+    resource = 'https://etherscan.io/token/OmiseGo#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('OmiseGo',
+                             'OMG',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def snt():
+    resource = 'https://etherscan.io/token/StatusNetwork#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('Status',
+                             'SNT',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def mkr():
+    resource = 'https://etherscan.io/token/Maker#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[0].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[0].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('Maker',
+                             'MKR',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def rhoc():
+    resource = 'https://etherscan.io/token/0x168296bb09e24a88805cb9c33356536b980d3fc5#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('RChain',
+                             'RHOC',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def wtc():
+    resource = 'https://etherscan.io/token/0xb7cb1c96db6b22b0d3d9536e0108d062bd488f74#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('Waltonchain',
+                             'WTC',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def rep():
+    resource = 'https://etherscan.io/token/REP#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('Augur',
+                             'REP',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def ae():
+    resource = 'https://etherscan.io/token/0x5ca9a71b1d01849c0a95490cc00559717fcf0d1d'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('Aeternity',
+                             'AE',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def zrx():
+    resource = 'https://etherscan.io/token/ZRX#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('0x',
+                             'ZRK',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
 def xlm():
     try:
         resource = 'https://stellarchain.io/'
@@ -369,15 +499,17 @@ def maid():
     except:
         pass
 
+
 # gxs(), maid(),
 functions = [
-            btc(), eth(), xlm(), dash(), xem(), usdt(), lsk(),
-            qtum(), btg(), zec(), bnb(), steem(), bcn(), waves(),
-            ppt(), kmd(), ardr(), drgn(), hsr(), part(),
-            xzc(), emc(), nxs(), veri()]
+            btc(), eth(), eos(), ven(), omg(), snt(), mkr(), xlm(), dash(),
+            xem(), usdt(), lsk(), qtum(), btg(), zec(), bnb(), steem(), bcn(),
+            waves(), ppt(), kmd(), ardr(), drgn(), hsr(), part(), rhoc(),
+            wtc(), ae(), zrx(), rep(), xzc(), emc(), nxs(), veri()]
 
 
 # functions
 print('currencies:', len(list_json))
 for i in list_json:
-    print(i['symbol'],i['marketcap_usd'],i['current_supply'], i['update_time'], end="\n")
+    print(i['symbol'], i['marketcap_usd'],
+          i['current_supply'], i['update_time'], end="\n")
