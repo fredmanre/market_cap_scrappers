@@ -75,7 +75,7 @@ def ubq():
     try:
         soup = extract_with_se(resource, 3)
         current = soup.find('td', id='ubiqAvailableSupply').text
-        market_cap = soup.find('td', id='ubiqMarketcap').text
+        market_cap = soup.find('td', id='ubiqMarketcap').text.split('$')[1]
         dict_ = insert_into_list('Ubiq', 'UBQ', market_cap, current, resource)
         list_json.append(dict_)
     except:
@@ -107,23 +107,24 @@ def xas():
         pass
 
 
-def spxtx():
-    resource = 'https://www.sophiatx.com/es.html'
-    try:
-        soup = extract_with_se(resource, 2)
-        current = soup.find('td', class_='stats_4').text.split(' ')[0]
-        market_cap = soup.find('td', class_='stats_6').text.split(' ')[1]
-        dict_ = insert_into_list('SophiaTX', 'SPHTX', market_cap, current, resource)
-        list_json.append(dict_)
-    except:
-        pass
+def sphtx():
+    resource = 'https://etherscan.io/token/0x3833dda0aeb6947b98ce454d89366cba8cc55528#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('SophiaTX',
+                             'SPHTX',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
 
 
 def  poa():
     resource = 'https://poaexplorer.com/'
     try:
         soup = extract_with_bs(resource)
-        market_cap = soup.find_all('span')[6].text[1:]
+        market_cap = soup.find_all('span')[7].text[1:]
         current = soup.find_all('span')[4].text
         dict_ = insert_into_list('POANetwork', 'POA', market_cap, current, resource)
         list_json.append(dict_)
@@ -132,11 +133,11 @@ def  poa():
 
 
 def xby():
-    resource = 'https://xtrabytes.global/'
+    resource = 'https://ethplorer.io/address/0x3833dda0aeb6947b98ce454d89366cba8cc55528'
     try:
         soup = extract_with_se(resource, 2)
-        market_cap = soup.find('span', id='market_cap_usd').text
-        current = soup.find('span', id='available_supply').text
+        market_cap = None
+        current = soup.find_all('span', class_="total-supply-usd")[0].text.split('\xa0')[1]
         dict_ = insert_into_list('XTRABYTES', 'XBY', market_cap, current, resource)
         list_json.append(dict_)
     except:
@@ -144,12 +145,11 @@ def xby():
 
 
 def smt():
-    resource = 'https://smartmesh.io/smt-token/'
+    resource = 'https://etherscan.io/token/0x55f93985431fc9304077687a35a1ba103dc1e081#tokenInfo'
     try:
         soup = extract_with_bs(resource)
-        p = soup.find_all('p')
-        market_cap = None
-        current = p[3].text.split(' ')[2]
+        market_cap = soup.find_all('tbody')[0].find_all('td')[5].text.split('$')[1]
+        current = soup.find_all('tbody')[0].find_all('td')[8].text.split(' ')[0]
         dict_ = insert_into_list('SmartMesh', 'SMT', market_cap, current, resource)
         list_json.append(dict_)
     except:
@@ -157,7 +157,7 @@ def smt():
 
 
 coins = [dtr(), game(), enj(), sls(), sky(), ubq(),
-         zen(), xas(), spxtx(), poa(), xby(), smt()]
+         zen(), xas(), sphtx(), poa(), xby(), smt()]
 
 
 # print('currencies:', len(list_json))
