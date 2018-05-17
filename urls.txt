@@ -14,12 +14,12 @@ XEM, https://nem.io/es/inversores/
 TRX, no indican ni market_cap ni supply(https://tron.network/entrx.html)
 Tether(USDT), https://wallet.tether.to/transparency(dice total assets, no market_cap)
 ETC, no tiene
-VEN, no tiene
+VEN, etherscan
 LSK, https://explorer.lisk.io/ (supply, habria que multiplicar por precio)
 qtum, https://explorer.qtum.org/
 Bitcoin Gold(BTG), https://btgexplorer.com/
 NANO, no tiene
-OMG, no tiene
+OMG, etherscan
 ZEC, https://explorer.zcha.in/
 ICX, no es preciso->https://www.icon.foundation/contents/icx/overviews?lang=en
 Binance(BNB), https://info.binance.com/currencies/binance-coin
@@ -29,9 +29,9 @@ Bytecoin(BCN), https://bytecoin.org/
 Waves(WAVES), http://wavesgo.com/stats
 Populous(PPT), https://populous.co/
 XVG, no permite el scrapping->trae el supply->https://verge-blockchain.info/
-STRAT, no tiene
-SNT, no tiene
-MKR, no tiene
+STRAT, etherscan
+SNT, etherscan
+MKR, etherscan
 RHOC, no tiene
 SC, poco precisa->https://sia.tech/
 DOGE, da error su pagina->http://dogechain.info/search?perror=0d9b6afb
