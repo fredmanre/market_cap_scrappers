@@ -97,25 +97,25 @@ Cindicator (CND), etherscan
 Pillar (PLR), etherscan
 Blocknet (BLOCK), no tiene
 Bitcore (BTX), poco preciso->https://bitcore.cc/
-Genesis Vision (GVT), no tiene
-Storm (STORM), no tiene
-SingularityNET (AGI), no tiene
-Storj (STORJ), no tiene
-Cindicator (CND), no tiene
+Genesis Vision (GVT), etherscan
+Storm (STORM), etherscan
+SingularityNET (AGI), etherscan
+Storj (STORJ), etherscan
+Cindicator (CND), etherscan
 Blocknet (BLOCK), no tiene
 BitcoinDark (BTCD), no tiene
-Gnosis (GNO), no tiene
+Gnosis (GNO), etherscan
 Vertcoin (VTC), no tiene
 Achain (ACT), no tiene
 MinexCoin (MNX), no tiene
-Decentraland (MANA), no tiene
-Civic (CVC), no tiene
+Decentraland (MANA), etherscan
+Civic (CVC), etherscan
 Dynamic Trading Rights (DTR), https://www.tokens.net/
-Quantstamp (QSP), no tiene
-Theta Token (THETA), no tiene
-Monaco (MCO), no tiene
-Aragon (ANT), no tiene
-Raiden Network Token (RDN), no tiene
+Quantstamp (QSP), etherscan
+Theta Token (THETA), etherscan
+Monaco (MCO), etherscan
+Aragon (ANT), etherscan
+Raiden Network Token (RDN), etherscan
 iExec RLC (RLC), poco preciso->https://iex.ec/es/rlc-token/
 GameCredits (GAME), https://blockexplorer.gamecredits.com/home(revisar)
 Metal (MTL), no tiene

@@ -6,6 +6,32 @@ from lib.functions import (insert_into_list,
 list_json = []
 
 
+def storm():
+    resource = 'https://etherscan.io/token/0xd0a4b8946cb52f0661273bfbc6fd0e0c75fc6433'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('Storm',
+                             'STORM',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def agi():
+    resource = 'https://etherscan.io/token/0x8eb24319393716668d768dcec29356ae9cffe285#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('SingularityNET',
+                             'AGI',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
 def dtr():
     resource = 'https://etherscan.io/token/0xd234bf2410a0009df9c3c63b610c09738f18ccd7#tokenInfo'
     soup = extract_with_bs(resource)
@@ -13,6 +39,45 @@ def dtr():
     current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
     dict_ = insert_into_list('DynamicTradingRights',
                              'DTR',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def storj():
+    resource = 'https://etherscan.io/token/Storj#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('Storj',
+                             'STORJ',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def gno():
+    resource = 'https://etherscan.io/token/Storj#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('Gnosis',
+                             'GNO',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def mana():
+    resource = 'https://etherscan.io/token/decentraland#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('Decentraland',
+                             'MANA',
                              market_cap,
                              current,
                              resource)
@@ -156,8 +221,87 @@ def smt():
         pass
 
 
-coins = [dtr(), game(), enj(), sls(), sky(), ubq(),
-         zen(), xas(), sphtx(), poa(), xby(), smt()]
+def cvc():
+    resource = 'https://etherscan.io/token/civic#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('Civic',
+                             'CVC',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def qsp():
+    resource = 'https://etherscan.io/token/0x99ea4db9ee77acd40b119bd1dc4e33e1c070b80d#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('Quantstamp',
+                             'QSP',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def theta():
+    resource = 'https://etherscan.io/token/0x3883f5e181fccaF8410FA61e12b59BAd963fb645#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('ThetaToken',
+                             'THETA',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def mco():
+    resource = 'https://etherscan.io/token/Monaco#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('Monaco',
+                             'MCO',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def ant():
+    resource = 'https://etherscan.io/token/Aragon#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('Aragon',
+                             'ANT',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def rdn():
+    resource = 'https://etherscan.io/token/0x255aa6df07540cb5d3d297f0d0d4d84cb52bc8e6#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('RaidenNetworkToken',
+                             'RDN',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+coins = [storm(), agi(), dtr(), storj(), gno(), mana(), cvc(), game(), enj(),
+         sls(), sky(), ubq(), zen(), xas(), sphtx(), poa(), xby(), smt(),
+         qsp(), theta(), mco(), ant(), rdn()]
 
 
 # print('currencies:', len(list_json))
