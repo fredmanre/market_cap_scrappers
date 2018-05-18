@@ -299,9 +299,494 @@ def rdn():
     list_json.append(dict_)
 
 
+def san():
+    resource = 'https://etherscan.io/token/SAN#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('SantimentNetworkToken',
+                             'SAN',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def ppp():
+    resource = 'https://etherscan.io/token/0xc42209aCcC14029c1012fB5680D95fBd6036E2a0#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('PayPie',
+                             'PPP',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def wax():
+    resource = 'https://etherscan.io/token/0x39Bb259F66E1C59d5ABEF88375979b4D20D98022#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('WAX',
+                             'WAX',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def poe():
+    resource = 'https://etherscan.io/token/0x0e0989b1f9b8a38983c2ba8053269ca62ec9b195#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('Po.et',
+                             'POE',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def gnx():
+    resource = 'https://etherscan.io/token/0x6ec8a24cabdc339a06a172f8223ea557055adaa5#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('Genaro Network',
+                             'GNX',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def xpa():
+    resource = 'https://etherscan.io/token/0x90528aeb3a2b736b780fd1b6c478bb7e1d643170#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('XPA',
+                             'XPA',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def abt():
+    resource = 'https://etherscan.io/token/0xb98d4c97425d9908e66e53a6fdf673acca0be986#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('ArcBlock',
+                             'ABT',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def evn():
+    resource = 'https://etherscan.io/token/0xd780ae2bf04cd96e577d3d014762f831d97129d0#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('Envion',
+                             'EVN',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def hpb():
+    resource = 'https://etherscan.io/token/0x38c6a68304cdefb9bec48bbfaaba5c5b47818bb2#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('HighPerformanceBlockchain',
+                             'HPB',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def nuls():
+    resource = 'https://etherscan.io/token/0xb91318f35bdb262e9423bc7c7c2a3a93dd93c92c#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[0].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[0].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('HighPerformanceBlockchain',
+                             'HPB',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def cs():
+    resource = 'https://etherscan.io/token/0x46b9ad944d1059450da1163511069c718f699d31#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('Credits',
+                             'CS',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def edg():
+    resource = 'https://etherscan.io/token/Edgeless#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('Edgeless',
+                             'EDG',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def adx():
+    resource = 'https://etherscan.io/token/0x4470bb87d77b963a013db939be332f927f2b992e#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('Adex',
+                             'ADX',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def fsn():
+    resource = 'https://etherscan.io/token/0xd0352a019e9ab9d757776f532377aaebd36fd541#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('Fusion',
+                             'FSN',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def vee():
+    resource = 'https://etherscan.io/token/0x340d2bde5eb28c1eed91b2f790723e3b160613b7#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('Blockv',
+                             'VEE',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def lend():
+    resource = 'https://etherscan.io/token/0x80fB784B7eD66730e8b1DBd9820aFD29931aab03#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('ETHLend',
+                             'LEND',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def blz():
+    resource = 'https://etherscan.io/token/0x5732046a883704404f284ce41ffadd5b007fd668#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('Blezelle',
+                             'BLZ',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def bix():
+    resource = 'https://etherscan.io/token/0xb3104b4b9da82025e8b9f8fb28b3553ce2f67069#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('BiBoxToken',
+                             'BIX',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def c20():
+    resource = 'https://etherscan.io/token/0x26e75307fc0c021472feb8f727839531f112f317#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('CRYPTO20',
+                             'c20',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def spank():
+    resource = 'https://etherscan.io/token/0x42d6622dece394b54999fbd73d108123806f6a18#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('SpankChain',
+                             'SPANK',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def rcn():
+    resource = 'https://etherscan.io/token/0xf970b8e36e23f7fc3fd752eea86f8be8d83375a6#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('RipioCreditNetwork',
+                             'RCN',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def jnt():
+    resource = 'https://etherscan.io/token/0xa5fd1a791c4dfcaacc963d4f73c6ae5824149ea7#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('JibrelNetwork',
+                             'JNT',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def data():
+    resource = 'https://etherscan.io/token/0x0cf0ee63788a0849fe5297f3407f701e122cc023#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('StreamrDATAcoin',
+                             'DATA',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def ost():
+    resource = 'https://etherscan.io/token/0x2c4e8f2d746113d0696ce89b35f0d8bf88e0aeca#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('OST',
+                             'OST',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def snm():
+    resource = 'https://etherscan.io/token/0x983f6d60db79ea8ca4eb9968c6aff8cfa04b3c63#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('SONM',
+                             'SNM',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def tel():
+    resource = 'https://etherscan.io/token/0x85e076361cc813a908ff672f9bad1541474402b2#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('Telcoin',
+                             'TEL',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def amb():
+    resource = 'https://etherscan.io/token/0x4dc3643dbc642b72c158e7f3d2ff232df61cb6ce#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('Ambrosus',
+                             'AMB',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def vibe():
+    resource = 'https://etherscan.io/token/0xe8ff5c9c75deb346acac493c463c8950be03dfba#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[0].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[0].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('VIBE',
+                             'VIBE',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def trac():
+    resource = 'https://etherscan.io/token/0xaa7a9ca87d3694b5755f213b5d04094b8d0f0a6f#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('OriginTrail',
+                             'TRAC',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def ast():
+    resource = 'https://etherscan.io/token/0x27054b13b1b798b345b591a4d22e6562d47ea75a#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('AirSwap',
+                             'AST',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def wings():
+    resource = 'https://etherscan.io/token/0x667088b212ce3d06a1b553a7221E1fD19000d9aF#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('Wings',
+                             'WINGS',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def qrl():
+    resource = 'https://etherscan.io/token/0x697beac28b09e122c4332d163985e8a73121b97f#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('QuantumResistantLedger',
+                             'QRL',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def kick():
+    resource = 'https://etherscan.io/token/0x697beac28b09e122c4332d163985e8a73121b97f#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('KickCoin',
+                             'KICK',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def utnp():
+    resource = 'https://etherscan.io/token/0x9e3319636e2126e3c0bc9e3134AEC5e1508A46c7#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('Universa',
+                             'UTNP',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def edo():
+    resource = 'https://etherscan.io/token/0xced4e93198734ddaff8492d525bd258d49eb388e#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('Eidoo',
+                             'EDO',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def taas():
+    resource = 'https://etherscan.io/token/Taas#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('TaaS',
+                             'TAAS',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def appc():
+    resource = 'https://etherscan.io/token/0x1a7a8bd9106f2b8d977e08582dc7d24c723ab0db#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('AppCoins',
+                             'APPC',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
 coins = [storm(), agi(), dtr(), storj(), gno(), mana(), cvc(), game(), enj(),
          sls(), sky(), ubq(), zen(), xas(), sphtx(), poa(), xby(), smt(),
-         qsp(), theta(), mco(), ant(), rdn()]
+         qsp(), theta(), mco(), ant(), rdn(), san(), ppp(), wax(), poe(),
+         gnx(), xpa(), abt(), evn(), hpb(), nuls(), cs(), edg(), adx(), fsn(),
+         vee(), lend(), blz(), bix(), c20(), spank(), rcn(), jnt(), data(),
+         ost(), snm(), amb(), tel(), vibe(), trac(), ast(), wings(), qrl(),
+         kick(), utnp(), edo(), taas(), appc()]
 
 
 # print('currencies:', len(list_json))

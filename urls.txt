@@ -121,75 +121,73 @@ GameCredits (GAME), https://blockexplorer.gamecredits.com/home(revisar)
 Metal (MTL), no tiene
 Enjin Coin (ENJ), https://enjincoin.io/#market
 Ignis (IGNIS), no tiene
-Santiment Network Token (SAN), no tiene
+Santiment Network Token (SAN), etherscan
 SaluS (SLS), http://www.presstab.pw/phpexplorer/SLS/
-PayPie (PPP), no tiene
+PayPie (PPP), etherscan
 Skycoin (SKY), https://explorer.skycoin.net/app/blocks/1
 NavCoin (NAV), no tiene
-WAX (WAX), no tiene
+WAX (WAX), etherscan
 Ubiq (UBQ), https://ubiqscan.io/assets/
-Po.et (POE), no tiene
-Genaro Network (GNX), no tiene
+Po.et (POE), etherscan
+Genaro Network (GNX), etherscan
 ZenCash (ZEN), https://zencash.com/
 Cube (AUTO), impreciso->https://cubeint.io/
-XPA (XPA), no tiene
-Arcblock (ABT), no tiene
+XPA (XPA), etherscan
+Arcblock (ABT), etherscan
 DigitalNote (XDN), no tiene
 DEW (DEW), https://dew.one/(pagina caida)
 Asch (XAS), https://explorer.asch.io/index.html
-Envion (EVN), no tiene
-Time New Bank (TNB), no tiene
+Envion (EVN), etherscan
+Time New Bank (TNB), sin informacion(etherscan)
 Einsteinium (EMC2), no tiene
 BridgeCoin (BCO), NO TIENE
-High Performance Blockchain (HPB), no tiene
+High Performance Blockchain (HPB), etherscan
 Pura (PURA), poco precisa->https://pura.one/
-Nuls (NULS), no tiene
-Credits (CS), no tiene
+Nuls (NULS), etherscan
+Credits (CS), etherscan
 SophiaTX (SPHTX), https://www.sophiatx.com/
 Oyster (PRL), poco preciso->https://oysterprotocol.com/
-Edgeless (EDG), no tiene
-AdEx (ADX), no tiene
-Fusion (FSN), no tiene
+Edgeless (EDG), etherscan
+AdEx (ADX),etherscan
+Fusion (FSN), etherscan
 MediBloc (MED), no tiene
 ION (ION), no tiene
 Experience Points (XP), no tiene
-BLOCKv (VEE), no tiene
-ETHLend (LEND), no tiene
-Bluzelle (BLZ), poco preciso->https://bluzelle.com/
-Bibox Token (BIX), no tiene
-CRYPTO20 (C20), no tiene
+BLOCKv (VEE), etherscan
+ETHLend (LEND), etherscan
+Bluzelle (BLZ), poco preciso->https://bluzelle.com/  etherscan
+Bibox Token (BIX), etherscan
+CRYPTO20 (C20), etherscan
 POA Network (POA), https://poaexplorer.com/
-SpankChain (SPANK), no tiene
-Ripio Credit Network (RCN), no tiene
-Jibrel Network (JNT), no tiene
+SpankChain (SPANK), etherscan
+Ripio Credit Network (RCN), etherscan
+Jibrel Network (JNT), etherscan
 SpaceChain (SPC), no tiene
-Streamr DATAcoin (DATA), no tiene
+Streamr DATAcoin (DATA), etherscan
 Feathercoin (FTC), solo tiene el maximo(https://www.feathercoin.com/)
-Simple Token (OST), no tiene
-SONM (SNM), no tiene
-MediShares (MDS), no tiene
+Simple Token (OST), etherscan
+SONM (SNM),etherscan
+MediShares (MDS), no tiene info en etherscan
 Peercoin (PPC), no tiene(poco preciso)
-Simple Token (OST), no tiene
 BitBay (BAY), no tiene
 XTRABYTES (XBY), https://xtrabytes.global/
 Wagerr (WGR), no tiene
 SmartMesh (SMT), https://smartmesh.io/smt-token/
-Pundi X (PXS), no tiene
-Telcoin (TEL), no tiene
-Ambrosus (AMB), no tiene
+Pundi X (PXS), no tiene(fuera de circulacion)
+Telcoin (TEL), etherscan
+Ambrosus (AMB), etherscan
 Red Pulse (RPX), no tiene
-VIBE (VIBE), no tiene
-OriginTrail (TRAC), no tiene
-AirSwap (AST), no tiene
-Wings (WINGS), no tiene
-Quantum Resistant Ledger (QRL), no tiene
-KickCoin (KICK), no tiene
-Universa (UTNP), no tiene
-Eidoo (EDO), no tiene
+VIBE (VIBE), etherscan
+OriginTrail (TRAC), etherscan
+AirSwap (AST), etherscan
+Wings (WINGS), etherscan
+Quantum Resistant Ledger (QRL), etherscan
+KickCoin (KICK), etherscan
+Universa (UTNP), etherscan
+Eidoo (EDO), etherscan
 Ink (INK), no tiene
-TaaS (TAAS), no tiene
-AirSwap (AST), no tiene
-AppCoins (APPC), tiene el total
+TaaS (TAAS), etherscan
+AppCoins (APPC), etherscan
 Melon (MLN), no tiene
 SingularDTV (SNGLS), no tiene
 Burst (BURST), api-poco preciso extraido de un exchange(https://explore.burst.cryptoguru.org/api/v1/supply)
