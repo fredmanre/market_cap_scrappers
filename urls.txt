@@ -188,11 +188,11 @@ Eidoo (EDO), etherscan
 Ink (INK), no tiene
 TaaS (TAAS), etherscan
 AppCoins (APPC), etherscan
-Melon (MLN), no tiene
-SingularDTV (SNGLS), no tiene
+Melon (MLN), etherscan
+SingularDTV (SNGLS), etherscan
 Burst (BURST), api-poco preciso extraido de un exchange(https://explore.burst.cryptoguru.org/api/v1/supply)
-IoT Chain (ITC), no tiene
-Gifto (GTO), no tiene
-MobileGo (MGO), no tiene
-INS Ecosystem (INS), no tiene
-UTRUST (UTK), no tiene
+IoT Chain (ITC), etherscan
+Gifto (GTO), etherscan
+MobileGo (MGO), etherscan
+INS Ecosystem (INS), etherscan
+UTRUST (UTK), etherscan

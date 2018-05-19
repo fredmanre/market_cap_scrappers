@@ -780,16 +780,109 @@ def appc():
     list_json.append(dict_)
 
 
+def mln():
+    resource = 'https://etherscan.io/token/Melon#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('Melon',
+                             'MLN',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def sngls():
+    resource = 'https://etherscan.io/token/SNGLS#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('SingularDTV',
+                             'SNGLS',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def itc():
+    resource = 'https://etherscan.io/token/0x5e6b6d9abad9093fdc861ea1600eba1b355cd940#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[0].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[0].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('IoT',
+                             'ITC',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def gto():
+    resource = 'https://etherscan.io/token/0xc5bbae50781be1669306b9e001eff57a2957b09d#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('Gifto',
+                             'DTO',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def mgo():
+    resource = 'https://etherscan.io/token/0x40395044Ac3c0C57051906dA938B54BD6557F212#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('MobileGo',
+                             'MGO',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def ins():
+    resource = 'https://etherscan.io/token/0x5b2e4a700dfbc560061e957edec8f6eeeb74a320#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('INSEcosystem',
+                             'INS',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
+def utk():
+    resource = 'https://etherscan.io/token/0x70a72833d6bf7f508c8224ce59ea1ef3d0ea3a38#tokenInfo'
+    soup = extract_with_bs(resource)
+    market_cap = soup.find_all('tbody')[1].find_all('td')[5].text.split('$')[1]
+    current = soup.find_all('tbody')[1].find_all('td')[8].text.split(' ')[0]
+    dict_ = insert_into_list('Utrust',
+                             'UTK',
+                             market_cap,
+                             current,
+                             resource)
+    list_json.append(dict_)
+
+
 coins = [storm(), agi(), dtr(), storj(), gno(), mana(), cvc(), game(), enj(),
          sls(), sky(), ubq(), zen(), xas(), sphtx(), poa(), xby(), smt(),
          qsp(), theta(), mco(), ant(), rdn(), san(), ppp(), wax(), poe(),
          gnx(), xpa(), abt(), evn(), hpb(), nuls(), cs(), edg(), adx(), fsn(),
          vee(), lend(), blz(), bix(), c20(), spank(), rcn(), jnt(), data(),
          ost(), snm(), amb(), tel(), vibe(), trac(), ast(), wings(), qrl(),
-         kick(), utnp(), edo(), taas(), appc()]
+         kick(), utnp(), edo(), taas(), appc(), mln(), sngls(), itc(), gto(),
+         mgo(), ins(), utk()]
 
 
 # print('currencies:', len(list_json))
 print('currencies:', len(list_json))
 for i in list_json:
-    print(i['symbol'],i['marketcap_usd'],i['current_supply'], i['update_time'], end="\n")
+    print(i['symbol'], i['marketcap_usd'],
+          i['current_supply'], i['update_time'], end="\n")
